@@ -1,0 +1,131 @@
+html {
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.flatcard {
+    border-radius: 3px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.flatcard:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+.flatcard__image {
+    position: relative;
+    flex: 1 0 300px;
+}
+
+.flatcard__image > img {
+    max-width: 100%;
+    display: block;
+}
+
+.btn__fav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white; 
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    background-image: url(heart_inactive.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.btn__fav:focus {
+    background-image: url(heart_active.svg);
+    outline: 0;
+}
+
+.btn__fav:hover {
+    background-image: url(heart_active.svg);
+    transform:scale(1.1,1.1);
+}
+
+.flatcard__banner {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    margin-right: 36px;
+    background: rgba(175, 173, 169, 0.9);
+    padding: 10px 12px;
+    border-radius: 0 0 3px 3px;
+    opacity: 90%;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+.nav-dots {
+    height: 9px;
+    width: 100%;
+    bottom: 9px;
+    display: block;
+    position: absolute;
+    text-align: center; 
+}
+
+.nav-dot {
+	top: -5px;
+	width: 9px;
+	height: 9px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255);
+}
+
+.flatcard__content {
+    padding: 20px; 
+}
+
+.flatcard__content > h2 {
+    border: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.flatcard__content p {
+    text-indent: 40px;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.flatcard__details {
+    margin: 5px 0 0 0;
+}
+
+.flatcard__details-flattype {
+    background-image: url("group.svg"); 
+}
+
+.flatcard__details-location {
+    background-image: url("location.svg");
+}
+
+.flatcard__details-availability {
+    background-image: url("clock.svg");
+}
+
+

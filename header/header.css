@@ -95,6 +95,7 @@ input[type=search]:focus {
     position: relative;
     padding: 31px 0;
     color: #53504B;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -113,7 +114,6 @@ input[type=search]:focus {
     transform: scaleX(1);
 }
 
-
 .header__nav button::after {
     position: absolute;
     content: "";
@@ -129,5 +129,84 @@ input[type=search]:focus {
     transform: scaleX(1);
 }
 
+.menu {
+    display: flex;
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    padding-left: 15px;
+}
 
+.menu button {
+    background-image: url(menu.svg);
+    background-color: white;
+    border: none;
+    height: 17px;
+    width: 25px;
+    background-repeat: no-repeat;
+    padding: 0; 
+    cursor: pointer;
+}
+
+
+/* Small Desktop Media Query */
+@media screen and (max-width: 810px) {
+
+    .logo_desktop {
+        display: none;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .logo {
+        flex-grow: 1;
+        margin-right: 40px;
+    }
+
+    .menu {
+        flex-basis: 25px;
+    }
+}
+
+
+
+
+/* Small Desktop Media Query */
+@media screen and (max-width: 980px) {
+
+    .logo_desktop {
+        display: none;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__nav a, .header__nav button {
+        padding: 28px 0; 
+    }
+
+    .logo a {
+        padding: 15px 0;
+    }
+}
+
+/* Large Desktop Media Query */
+@media screen and (min-width: 980px) {
+
+    .logo_mobile {
+        display: none
+    }
+
+    .menu {
+        display: none;
+    }
+}
 

@@ -6,11 +6,15 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
-    <script src="main.js"></script>
+    
 </head>
 <body>
     <header> 
 
+        <div class="menu">
+            <button id="menu-button-js"> </button>
+        </div>
+       
         <div class="header__search">
             <form> 
                 <input type="search" placeholder="Enter City..."> 
@@ -19,7 +23,8 @@
 
         <div class="logo"> 
             <a href="#"> 
-                <img src="logo.svg" alt="Flatsearch.cz"/> 
+                <img src="logo.svg" alt="Flatsearch.cz" class="logo_desktop"/> 
+                <img src="logo_mobile.svg" alt="Flatsearch" class="logo_mobile"/>
             </a>
         </div>
         
@@ -28,8 +33,23 @@
             <button>Sign Up</button>
             <button>Log In</button>
         </nav>
-    
+        <!-- <div id="drawer-js" class="drawer">hello</div> -->
     </header>
-    
+    <script>
+        window.onload = () => {
+            const menuButton = document.getElementById('menu-button-js');
+            const drawer = document.getElementById('drawer-js');
+            menuButton.addEventListener('click', function() {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    drawer.classList.remove('drawer--active');
+                } else {
+                    this.className += ' active';
+                    drawer.className += ' drawer--active';
+                }
+            })
+
+        }
+    </script>
 </body>
 </html>

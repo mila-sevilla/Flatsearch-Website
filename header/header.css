@@ -1,0 +1,133 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: Montserrat; 
+    background-color: #FCFCFC;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.header__search {
+    width: 33.33%;
+}
+
+.header__search form {
+    padding-left: 15px;
+}
+
+input[type=search] {
+    width: 293px;
+    height: 45px;
+    border: 1px solid #C9C5BD;
+    border-radius: 3px;
+    padding: 0 10px 0 40px;
+    background-image: url(searchicon.svg);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+input[type=search]:focus {
+    outline: none;
+    border: 1px solid #53504B;
+}
+
+::placeholder {
+    color: #B3B1AD;
+    font-family: Montserrat;
+    letter-spacing: 1px;
+}
+
+.logo {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo a {
+    display: flex;
+    height: 100%;
+}
+
+.header__nav {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #53504B;
+    font-size: 14px;
+    height: 100%;
+    margin: 0 15px 0 15px;
+    display: inline-block;
+    position: relative;
+    padding: 31px 0;
+}
+
+.header__nav button {
+    height: 100%;
+    margin: 0 15px 0 15px;
+    border: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    padding: 31px 0;
+    color: #53504B;
+    cursor: pointer;
+}
+
+.header__nav a::after {
+    position: absolute;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    border-bottom: 2px solid #ffae00;
+    display: block;
+    width: 100%;
+    bottom: 0;
+  }
+  
+.header__nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.header__nav button::after {
+    position: absolute;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    border-bottom: 2px solid #ffae00;
+    display: block;
+    width: 100%;
+    bottom: 0;
+  }
+  
+.header__nav button:hover::after {
+    transform: scaleX(1);
+}
+
+
+

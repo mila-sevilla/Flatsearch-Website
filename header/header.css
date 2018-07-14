@@ -150,8 +150,49 @@ input[type=search]:focus {
     cursor: pointer;
 }
 
+.drawer {
+    position: absolute;
+    right: -235px;
+    height: 100vh;
+    top: 0;
+    background-color: #FCFCFC;
+    transition: 0.3s ease-in;
+}
 
-/* Small Desktop Media Query */
+.drawer > .drawer--overlay {
+    background-color: rgba(161, 161, 161, 0.3);
+    height: 100vh;
+    right: -235px;
+    transition: 0.3s ease-in;
+}
+
+.drawer a, .drawer button {
+    padding: 30px 27px 30px 29px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    font-family: Montserrat;
+    border: none;
+    background-color: #FCFCFC;
+
+}
+
+.drawer--active {
+    transform: translateX(0);
+    right: 0;
+}
+
+.drawer--active > .drawer--overlay {
+    transform: translateX(0);
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+/* Tablet and Mobile Media Query */
 @media screen and (max-width: 810px) {
 
     .header__search {
@@ -175,7 +216,7 @@ input[type=search]:focus {
     }
 }
 
-/* Small Desktop Media Query */
+/* Desktop Media Query */
 @media screen and (min-width: 810px) {
     .menu {
         display: none;

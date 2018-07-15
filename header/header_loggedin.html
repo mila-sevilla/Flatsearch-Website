@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./header_loggedin.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     
 </head>
@@ -26,22 +26,26 @@
         
         <nav class="header__nav"> 
             <a href="#">Add Listing</a>
-            <button>Sign Up</button>
-            <button>Log In</button>
+            <a href="#">Favorites</a>
+            <div class="menu">
+                <button id="menu-button-js"> </button>
+            </div>  
         </nav>
 
-        <div class="menu">
-                <button id="menu-button-js"> </button>
-        </div>
+      
 
         <div id="drawer-js" class="drawer">
             <div class="drawer--overlay closeBtn-js"> </div>
             <div class="drawer--sidebar"> 
                 <button class="closeBtn closeBtn-js">x</button>
-                <a class="drawer--home" href="#">Home</a>
-                <a class="drawer--addListing" href="#">Add Listing</a>
-                <button class="drawer--signUp">Sign Up</button>
-                <button class="drawer--logIn">Log In</button>
+                <a class="drawer__icon drawer__profilePic" href="#">Mila Sevilla Zhou</a>
+                <a class="drawer__icon drawer__home" href="#">Home</a>
+                <a class="drawer__icon drawer__addListing" href="#">Add Listing</a>
+                <a class="drawer__icon drawer__favorites" href="#">Your Favorites</a>
+                <a class="drawer__icon drawer__profile" href="#">Edit Profile</a>
+                <a class="drawer__icon drawer__seeListing" href="#">See Your Listings</a>
+                <a class="drawer__icon drawer__settings" href="#">Account Settings</a>
+                <a class="drawer__icon drawer__signOut" href="#">Sign Out</a>
             </div>
         </div>
 

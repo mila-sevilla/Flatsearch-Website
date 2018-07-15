@@ -1,0 +1,292 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: Montserrat; 
+    background-color: #FCFCFC;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.header__search {
+    width: 33.33%;
+}
+
+.header__search form {
+    padding-left: 15px;
+}
+
+input[type=search] {
+    max-width: 293px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #C9C5BD;
+    border-radius: 3px;
+    padding: 0 10px 0 40px;
+    background-image: url(searchicon.svg);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+input[type=search]:focus {
+    outline: none;
+    border: 1px solid #53504B;
+}
+
+::placeholder {
+    color: #B3B1AD;
+    font-family: Montserrat;
+    letter-spacing: 1px;
+}
+
+.logo {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo a {
+    display: flex;
+    height: 100%;
+}
+
+.header__nav {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #53504B;
+    font-size: 14px;
+    height: 100%;
+    margin: 0 15px 0 15px;
+    display: inline-block;
+    position: relative;
+    padding: 28px 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header__nav a::after {
+    position: absolute;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    border-bottom: 2px solid #ffae00;
+    display: block;
+    width: 100%;
+    bottom: 0;
+  }
+  
+.header__nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.header__nav button::after {
+    position: absolute;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    border-bottom: 2px solid #ffae00;
+    display: block;
+    width: 100%;
+    bottom: 0;
+  }
+  
+.header__nav button:hover::after {
+    transform: scaleX(1);
+}
+
+.menu {
+    margin: 0 15px 0 15px;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.menu button {
+    background-image: url(menu.svg);
+    background-color: white;
+    border: none;
+    padding: 29px 0 30px 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+}
+
+.drawer {
+    position: fixed;
+    width: 100%;
+    left: 100%;
+    display: flex;
+    height: 100vh;
+    top: 0;
+    transition: transform .2s ease-in .06s;
+}
+
+.drawer--active {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+}
+
+.drawer--sidebar {
+    flex: 1 0 235px;
+    max-width: 235px;
+    background-color: #FCFCFC;
+    z-index: 11;
+    margin: 0;
+    height: 100%;
+    border-radius: 3px 0 0 3px;
+}
+
+.drawer--overlay {
+    flex-grow: 1;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity .05s linear;
+    z-index: 10;
+    left: 100%;
+}
+
+.drawer--active > .drawer--overlay {
+    opacity: 1;
+    transition: opacity .3s linear .3s;
+}
+
+.drawer a, .drawer button {
+    margin: 0 28px;
+    padding: 20px 0px 20px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    font-family: Montserrat;
+    border: none;
+    background-color: #FCFCFC;
+}
+
+.drawer .closeBtn {
+    padding: 15px 171px 5px 0;
+}
+
+.drawer__icon {
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-top: 30px;
+}
+
+.drawer .drawer__profilePic {
+    background-image: url(account_pers2.svg);
+    background-position: center top;
+    background-position-y: 0px;
+    border-bottom: 1px solid #D7D3CE;
+    padding: 100px 0px 20px 0px;
+    text-align: center;
+}
+
+.drawer .drawer__home {
+    background-image: url(home.svg);
+}
+
+.drawer__addListing {
+    background-image: url(pencil.svg); 
+}
+
+.drawer__signUp {
+    background-image: url(account.svg);
+}
+
+.drawer__logIn {
+    background-image: url(login.svg);
+}
+
+.drawer__favorites {
+    background-image: url(heart.svg);
+}
+
+.drawer__profile {
+    background-image: url(account.svg);
+}
+
+.drawer__seeListing {
+    background-image: url(folder.svg);
+}
+
+.drawer__settings {
+    background-image: url(setting.svg);
+}
+
+.drawer__signOut {
+    background-image: url(signout.svg);
+}
+
+
+/* Tablet and Mobile Media Query */
+@media screen and (max-width: 810px) {
+
+    .header__search {
+        display: none;
+    }
+
+    .header__nav a {
+        display: none;
+    }
+
+    .header__nav {
+        flex-basis: 25px;
+        height: 100%;
+    }
+
+    .logo {
+        flex-grow: 1;
+    }
+
+    .menu {
+        flex-basis: 25px;
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+
+    .menu button {
+        height: 17px;
+        width: 25px;
+        padding: 0;
+    }
+   
+    .logo a {
+        padding: 15px 0;
+    }
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: 810px) {
+    .menu button {
+        background-image: url(account_pers.svg);
+        height: 44px;
+        width: 44px;
+    }
+
+}
+

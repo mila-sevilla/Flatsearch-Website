@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     
 </head>
 <body>
@@ -30,17 +31,17 @@
         </nav>
 
         <div class="menu">
-                <button id="menu-button-js"> </button>
+            <button id="menu-button-js"> </button>
         </div>
 
         <div id="drawer-js" class="drawer">
             <div class="drawer--overlay closeBtn-js"> </div>
             <div class="drawer--sidebar"> 
                 <button class="closeBtn closeBtn-js">x</button>
-                <a href="#">Home</a>
-                <a href="#">Add Listing</a>
-                <button>Sign Up</button>
-                <button>Log In</button>
+                <a class="drawer--home" href="#">Home</a>
+                <a class="drawer--addListing" href="#">Add Listing</a>
+                <button class="drawer--signUp">Sign Up</button>
+                <button class="drawer--logIn">Log In</button>
             </div>
         </div>
 
@@ -67,6 +68,12 @@
                 })
             })
         }
+        // Listen to tab events to enable outlines (accessibility improvement)
+        document.body.addEventListener('keyup', function(e) {
+            if (e.which === 9) /* tab */ {
+                document.documentElement.classList.remove('no-focus-outline');
+  }
+});
     </script>
 </body>
 </html>

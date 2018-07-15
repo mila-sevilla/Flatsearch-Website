@@ -85,6 +85,10 @@ input[type=search]:focus {
     padding: 28px 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 .header__nav button {
     height: 100%;
     margin: 0 15px 0 15px;
@@ -97,7 +101,6 @@ input[type=search]:focus {
     padding: 28px 0;
     color: #53504B;
     background-color: white;
-    cursor: pointer;
 }
 
 .header__nav a::after {
@@ -147,7 +150,6 @@ input[type=search]:focus {
     width: 25px;
     background-repeat: no-repeat;
     padding: 0; 
-    cursor: pointer;
 }
 
 .drawer {
@@ -172,6 +174,7 @@ input[type=search]:focus {
     z-index: 11;
     margin: 0;
     height: 100%;
+    border-radius: 3px 0 0 3px;
 }
 
 .drawer--overlay {
@@ -190,7 +193,8 @@ input[type=search]:focus {
 }
 
 .drawer a, .drawer button {
-    padding: 30px 27px 30px 29px;
+    margin: 0 28px;
+    padding: 20px 30px 20px 40px;
     text-decoration: none;
     font-size: 16px;
     color: #818181;
@@ -201,7 +205,36 @@ input[type=search]:focus {
 }
 
 .drawer .closeBtn {
-    cursor: pointer;
+    border-bottom: 1px solid #D7D3CE;
+    padding: 15px 171px 30px 0;
+}
+
+.drawer .drawer--home {
+    background-image: url(home.svg);
+    background-repeat: no-repeat;
+    background-position: left; 
+    padding-top: 30px;
+    background-position-y: 25px;
+}
+
+
+.drawer--addListing {
+    background-image: url(pencil.svg);
+    background-repeat: no-repeat;
+    background-position: left; 
+    background-position-y: 14px;
+}
+
+.drawer--signUp {
+    background-image: url(account.svg);
+    background-repeat: no-repeat;
+    background-position: left; 
+}
+
+.drawer--logIn {
+    background-image: url(login.svg);
+    background-repeat: no-repeat;
+    background-position: left; 
 }
 
 
@@ -237,6 +270,4 @@ input[type=search]:focus {
     }
    
 }
-
-
 

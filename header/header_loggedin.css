@@ -143,12 +143,12 @@ button {
     display: flex;
     height: 100vh;
     top: 0;
-    transition: transform .2s ease-in .06s;
+    transition: transform .2s linear .06s;
 }
 
 .drawer--active {
     transform: translateX(-100%);
-    transition: transform 0.3s ease-in;
+    transition: transform .3s ease-out;
 }
 
 .drawer--sidebar {
@@ -176,29 +176,26 @@ button {
 }
 
 .drawer a, .drawer button {
-    margin: 0 28px;
-    padding: 20px 0px 20px 40px;
+    padding: 20px 0px 20px 0px;
+    margin: 0 23px;
     text-decoration: none;
     font-size: 16px;
     color: #818181;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     font-family: Montserrat;
     border: none;
     background-color: #FCFCFC;
+    width: 189px;
 }
 
 .drawer .closeBtn {
     padding: 15px 171px 5px 0;
 }
 
-.drawer__icon {
-    background-repeat: no-repeat;
-    background-position: left;
-    padding-top: 30px;
-}
-
 .drawer .drawer__profilePic {
     background-image: url(account_pers2.svg);
+    background-repeat: no-repeat;
     background-position: center top;
     background-position-y: 0px;
     border-bottom: 1px solid #D7D3CE;
@@ -206,40 +203,18 @@ button {
     text-align: center;
 }
 
-.drawer .drawer__home {
-    background-image: url(home.svg);
+.drawer__icon {
+    display: flex;
+    align-items: center;
 }
 
-.drawer__addListing {
-    background-image: url(pencil.svg); 
+.drawer__icon span {
+    height: 100%;
+    padding-left: 12px; 
 }
 
-.drawer__signUp {
-    background-image: url(account.svg);
-}
-
-.drawer__logIn {
-    background-image: url(login.svg);
-}
-
-.drawer__favorites {
-    background-image: url(heart.svg);
-}
-
-.drawer__profile {
-    background-image: url(account.svg);
-}
-
-.drawer__seeListing {
-    background-image: url(folder.svg);
-}
-
-.drawer__settings {
-    background-image: url(setting.svg);
-}
-
-.drawer__signOut {
-    background-image: url(signout.svg);
+.drawer__icon svg {
+    width: 26px; 
 }
 
 

@@ -176,7 +176,6 @@ button {
 }
 
 .drawer a, .drawer button {
-    padding: 20px 0px 20px 0px;
     margin: 0 23px;
     text-decoration: none;
     font-size: 16px;
@@ -201,21 +200,40 @@ button {
     border-bottom: 1px solid #D7D3CE;
     padding: 100px 0px 20px 0px;
     text-align: center;
+    font-weight: 300;
 }
 
 .drawer__icon {
     display: flex;
     align-items: center;
+    padding: 18px 0px;
 }
 
 .drawer__icon span {
     height: 100%;
     padding-left: 12px; 
+    font-weight: 300;
 }
 
-.drawer__icon svg {
-    width: 26px; 
+.drawer__icon span:hover {
+    font-weight: 400;
 }
+
+.drawer__icon__setting {
+    border-bottom: 1px solid #D7D3CE;
+    padding-bottom: 20px;
+}
+
+svg:hover path {
+    fill: #FFAE00;
+    transition: all ease 0.3s;
+  }
+  
+.drawer__icon svg path {
+    transition: all ease 0.3s;
+  }
+
+
 
 
 /* Tablet and Mobile Media Query */

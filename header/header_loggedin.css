@@ -180,12 +180,13 @@ button {
     text-decoration: none;
     font-size: 16px;
     color: #818181;
-    display: inline-block;
-    vertical-align: middle;
     font-family: Montserrat;
-    border: none;
     background-color: #FCFCFC;
     width: 189px;
+}
+
+.drawer button {
+    border: none;
 }
 
 .drawer .closeBtn {
@@ -201,6 +202,7 @@ button {
     padding: 100px 0px 20px 0px;
     text-align: center;
     font-weight: 300;
+    display: block
 }
 
 .drawer__icon {
@@ -224,10 +226,19 @@ button {
     padding-bottom: 20px;
 }
 
-svg:hover path {
+.drawer__icon__signOut {
+    padding-top: 20px;
+}
+
+.drawer__icon:hover > svg path {
     fill: #FFAE00;
     transition: all ease 0.3s;
   }
+
+.drawer__icon:hover .drawer__icon__nofill {
+    fill: none;
+    stroke: #FFAE00;
+}
   
 .drawer__icon svg path {
     transition: all ease 0.3s;

@@ -87,6 +87,19 @@ input[type=search]:focus {
 
 button {
     cursor: pointer;
+    outline: none;
+}
+
+button:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+button:focus:hover {
+    outline: none !important;
+}
+
+button:active {
+    outline: none !important;
 }
 
 .header__nav a::after {
@@ -109,11 +122,11 @@ button {
     content: "";
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
-    border-bottom: 2px solid #ffae00;
     display: block;
     width: 100%;
     bottom: 0;
-  }
+    border-bottom: 2px solid #ffae00;
+}
   
 .header__nav button:hover::after {
     transform: scaleX(1);
@@ -175,7 +188,7 @@ button {
     transition: opacity .3s linear .3s;
 }
 
-.drawer a, .drawer button {
+.drawer a {
     margin: 0 23px;
     text-decoration: none;
     font-size: 16px;
@@ -189,9 +202,35 @@ button {
     border: none;
 }
 
-.drawer .closeBtn {
-    padding: 15px 171px 5px 0;
-}
+.closeBtn {
+    position: absolute;
+    right: 190px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    opacity: 0.6;
+    padding: 20px;
+    background-color: transparent;
+    ;
+  }
+  .closeBtn:hover {
+    opacity: 1;
+  }
+  .closeBtn:before, .closeBtn:after {
+    position: absolute;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #818181;
+    top: 10px;
+  }
+  .closeBtn:before {
+    transform: rotate(45deg);
+  }
+  .closeBtn:after {
+    transform: rotate(-45deg);
+  }
+
 
 .drawer .drawer__profilePic {
     background-image: url(account_pers2.svg);
@@ -202,7 +241,8 @@ button {
     padding: 100px 0px 20px 0px;
     text-align: center;
     font-weight: 300;
-    display: block
+    display: block;
+    margin-top: 10px;
 }
 
 .drawer__icon {
@@ -246,9 +286,8 @@ button {
 
 
 
-
 /* Tablet and Mobile Media Query */
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 834px) {
 
     .header__search {
         display: none;
@@ -285,7 +324,7 @@ button {
 }
 
 /* Desktop Media Query */
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 835px) {
     .menu button {
         background-image: url(account_pers.svg);
         height: 44px;

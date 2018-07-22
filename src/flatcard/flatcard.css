@@ -10,7 +10,7 @@ html {
     border-radius: 3px;
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
     overflow: hidden;
-    max-width: 600px;
+    max-width: 450px;
 }
 
 .flatcard:hover {
@@ -34,24 +34,27 @@ html {
     left: 0;
     top: 0;
     background-color: white; 
+    margin: 5px;
+    cursor: pointer;
+    padding: 0;
     border-radius: 50%;
+    border: none;
     height: 35px;
     width: 35px;
-    margin: 5px;
-    background-image: url(heart_inactive.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
 }
 
-.btn__fav:focus {
-    background-image: url(heart_active.svg);
-    outline: 0;
+.btn__fav svg {
+    display: block;
+    margin: auto;
 }
 
 .btn__fav:hover {
-    background-image: url(heart_active.svg);
     transform:scale(1.1,1.1);
+}
+
+.btn__fav:hover > svg path {
+    fill: #FFAF01;
+    transition: all ease 0.1s;
 }
 
 .flatcard__banner {
@@ -81,7 +84,8 @@ html {
 	top: -5px;
 	width: 9px;
 	height: 9px;
-	margin: 0 4px;
+    margin: 0 4px;
+    padding: 0 4px;
 	position: relative;
 	border-radius: 100%;
 	display: inline-block;

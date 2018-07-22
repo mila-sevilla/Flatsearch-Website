@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    
+</head>
+<body>
+    <header> 
+
+        <div class="header__search">
+            <form> 
+                <input type="search" placeholder="Enter City..."> 
+            </form>
+        </div>
+
+        <div class="logo"> 
+            <a href="#"> 
+                <img src="logo.svg" alt="Flatsearch.cz"/> 
+            </a>
+        </div>
+        
+        <nav class="header__nav"> 
+            <a href="#">Add Listing</a>
+            <button>Sign Up</button>
+            <button>Log In</button>
+        </nav>
+
+        <div class="menu">
+                <button id="menu-button-js"> </button>
+        </div>
+
+        <div id="drawer-js" class="drawer">
+            <div class="drawer--overlay closeBtn-js"> </div>
+            <div class="drawer--sidebar"> 
+                <button class="closeBtn closeBtn-js">x</button>
+                <a class="drawer--home" href="#">Home</a>
+                <a class="drawer--addListing" href="#">Add Listing</a>
+                <button class="drawer--signUp">Sign Up</button>
+                <button class="drawer--logIn">Log In</button>
+            </div>
+        </div>
+
+    </header>
+
+    <script>
+        window.onload = () => {
+            const menuButton = document.getElementById('menu-button-js');
+            const drawer = document.getElementById('drawer-js');
+            const closeBtns = document.querySelectorAll('.closeBtn-js');
+            menuButton.addEventListener('click', function() {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    drawer.classList.remove('drawer--active');
+                } else {
+                    this.className += ' active';
+                    drawer.className += ' drawer--active';
+                }
+            })
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    menuButton.classList.remove('active');
+                    drawer.classList.remove('drawer--active');            
+                })
+            })
+        }
+    </script>
+</body>
+</html>

@@ -15,12 +15,13 @@ body {
 header {
     display: flex;
     width: 100%;
-    justify-content: center;
+    max-width: 100vw;
     align-items: center;
     flex-direction: row;
     background-color: white;
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    max-height: 74px;
 }
 
 .logo {
@@ -115,11 +116,11 @@ button:active {
     flex: 1 0 235px;
     max-width: 235px;
     background-color: #FCFCFC;
-    z-index: 11;
     margin: 0;
     height: 100%;
     border-radius: 3px 0 0 3px;
-    overflow: scroll;
+    -ms-overflow-style: none;
+    overflow: auto;
 }
 
 .drawer--overlay {
@@ -127,7 +128,6 @@ button:active {
     background-color: rgba(0,0,0,0.3);
     opacity: 0;
     transition: opacity .05s linear;
-    z-index: 10;
     left: 100%;
 }
 
@@ -231,6 +231,7 @@ button:active {
         
     .header__search form {
         padding-left: 15px;
+        display: flex;
     }
         
     input[type=search] {
@@ -280,6 +281,7 @@ button:active {
         height: 100%;
         margin: 0 15px 0 15px;
         padding: 28px 0;
+        background-color: transparent;
     }
 
     .header__nav__logIn {

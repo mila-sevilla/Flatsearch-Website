@@ -80,7 +80,7 @@ button:active {
     flex-basis: 25px;
     justify-content: flex-start;
     padding-top: 0;
-    margin: 0 15px 0 15px;
+    margin: 0px 15px 0 15px;
     height: 100%;
 }
 
@@ -120,6 +120,7 @@ button:active {
     height: 100%;
     border-radius: 3px 0 0 3px;
     -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
     overflow: auto;
 }
 

@@ -17,6 +17,7 @@
 .forms__heading progress {
     display: block;
     width: 90%;
+    max-width: 840px;
     height: 10px;
     -webkit-appearance: none;
 }
@@ -41,7 +42,6 @@ progress[value]::-webkit-progress-value {
 
 .addListingChips > div {
     display: flex;
-    margin-top: 15px;
 }
 
 .addListingChips input {
@@ -57,13 +57,15 @@ progress[value]::-webkit-progress-value {
 
 .addListingChips__option {
     margin-left: 15px;
-    margin-right: 5px;
     display: flex;
 }
 
+.addListingChips__option__flat {
+    margin-right: 15px;
+}
+
 .addListingChips legend {
-    margin-right: 50px;
-    margin-left: 15px;
+    margin: 0 70px 15px 15px;
     padding-left: 0;
     padding-right: 0; 
     white-space: normal;
@@ -82,5 +84,11 @@ fieldset {
     padding: 0;
 }
 
+/* Desktop Media Query */
+@media screen and (min-width: 443px) {
 
-
+    .addListingChips legend {
+        margin: 0 10% 0 15px;
+    }
+    
+}

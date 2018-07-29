@@ -7,6 +7,15 @@
     -webkit-appearance: none;
 }
 
+.addListingProgressBar label {
+    text-align: end;
+    position: absolute;
+    width: 90%;
+    max-width: 840px;
+    top: 0; 
+    margin-top: 12px;
+}
+
 progress[value]::-webkit-progress-bar {
     background-color: #D6DCDA;
     border-radius: 10px;
@@ -15,4 +24,5 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
       border-radius: 10px; 
       background-color: #249974;
-  }
+}
+

@@ -38,12 +38,6 @@ header {
     padding: 15px 0;
 }
 
-button {
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
 button:focus {
     outline: 5px auto -webkit-focus-ring-color;
 }

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../base.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="forms.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="formInput formInput--text">
+        <div>
+            <label class="formInput__label" for="City">City</label>
+            <input class="formInput__input" type="text" name="city"></input>
+            <span class="formInput__suffix">eur</span>
+        </div>
+        <small="formInput__error">You must provide a valid email</small>
+    </div>
+
+    <br><br>
+
+    <div class="formInput formInput--textarea">
+        <div>
+            <label class="formInput__label" for="City">City</label>
+            <input class="formInput__input formInput__input--textarea" type="textarea" name="city"></input>
+        </div>
+        <small="formInput__error">This field is required</small>
+    </div>
+
+    <div class="formInput formInput--checkbox">
+        <div>
+            <input class="formInput__input formInput__input--checkbox" type="checkbox" name="city"></input>
+            <label class="formInput__label" for="City">check this out.</label>
+        </div>
+        <small="formInput__error">Must be checked</small>
+    </div>
+
+</body>

@@ -1,0 +1,30 @@
+.forms__heading {
+    margin: 15px 15px 55px 15px;
+}
+
+.forms__heading h2 {
+    display: inline-block;
+    font-size: 16;
+    font-weight: 500;
+}
+
+.forms__heading h2:nth-child(2) {
+    color: #C08404;
+}
+
+.forms__heading progress {
+    display: block;
+    width: 70%;
+    height: 10px;
+    -webkit-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #D6DCDA;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+      border-radius: 10px; 
+      background-color: #249974;
+  }

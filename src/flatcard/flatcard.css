@@ -121,15 +121,15 @@ html {
 }
 
 .flatcard__details-flattype {
-    background-image: url("group.svg"); 
+    background-image: url("./assets/group.svg"); 
 }
 
 .flatcard__details-location {
-    background-image: url("location.svg");
+    background-image: url("./assets/location.svg");
 }
 
 .flatcard__details-availability {
-    background-image: url("clock.svg");
+    background-image: url("./assets/clock.svg");
 }
 
 

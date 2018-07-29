@@ -7,11 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../base.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="forms.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="FormInput.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 </head>
 
 <body>
+
+    <br> </br>
+    
+    <fieldset>
+        <div class="addListingChips">
+            <legend for="Type">Type</legend>
+            <div> <!-- styles on div -->
+                <div class="addListingChips__option">
+                    <input type="radio" name="room" id="option1" value="1" checked="checked" />
+                    <label for="option1"> Room (shared flat) </label>
+                </div>
+
+                <div class="addListingChips__option addListingChips__option__flat">
+                    <input type="radio" name="flat" id="option3" value="3" />
+                    <label for="option3"> Entire Flat </label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <br> </br>
 
     <div class="formInput formInput--text">
         <div>
@@ -22,7 +43,8 @@
         <small class="formInput__error">You must provide a valid email</small>
     </div>
 
-    <br><br>
+    <br>
+    <br>
 
     <div class="formInput formInput--textarea">
         <div>

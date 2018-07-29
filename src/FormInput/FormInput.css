@@ -1,0 +1,60 @@
+.addListingChips {
+    display: flex;
+    align-items: center;
+    color: #53504B;
+    flex-wrap: wrap;
+
+}
+
+.addListingChips > div {
+    display: flex;
+}
+
+.addListingChips input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.addListingChips__option label {
+    border: 1px solid #726F68;
+    border-radius: 3px;
+    padding: 8px 10px;
+}
+
+.addListingChips__option {
+    margin-left: 15px;
+    display: flex;
+}
+
+.addListingChips__option__flat {
+    margin-right: 15px;
+}
+
+.addListingChips legend {
+    margin: 0 70px 15px 15px;
+    padding-left: 0;
+    padding-right: 0; 
+    white-space: normal;
+}
+
+.addListingChips__option input:focus + label { 
+    border: 1px solid #FFAE00;
+    box-shadow: inset 0 0 0 0.5px #FFAE00; 
+}
+
+input[type=checkbox]:checked + label {
+    border: 1px solid #FFAE00;
+  } 
+
+fieldset {
+    padding: 0;
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: 443px) {
+
+    .addListingChips legend {
+        margin: 0 10% 0 15px;
+    }
+    
+}

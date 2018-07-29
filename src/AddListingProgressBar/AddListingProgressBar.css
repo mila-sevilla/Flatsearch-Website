@@ -1,20 +1,8 @@
-.forms__heading {
-    margin: 15px 15px 55px 15px;
-}
 
-.forms__heading h2 {
-    display: inline-block;
-    font-size: 16;
-    font-weight: 500;
-}
-
-.forms__heading h2:nth-child(2) {
-    color: #C08404;
-}
-
-.forms__heading progress {
+.addListingProgressBar progress {
     display: block;
-    width: 70%;
+    width: 90%;
+    max-width: 840px;
     height: 10px;
     -webkit-appearance: none;
 }

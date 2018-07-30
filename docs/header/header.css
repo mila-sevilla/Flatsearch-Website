@@ -109,7 +109,7 @@ button:active {
 }
 
 .menu button {
-    background-image: url(menu.svg);
+    background-image: url(./assets/menu.svg);
     background-color: white;
     border: none;
     padding: 0;
@@ -128,7 +128,7 @@ button:active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
+    height: 100%;
     top: 0;
     -webkit-transition: -webkit-transform .2s linear .06s;
     transition: -webkit-transform .2s linear .06s;
@@ -293,7 +293,7 @@ button:active {
         border: 1px solid #C9C5BD;
         border-radius: 3px;
         padding: 0 100px 0 40px;
-        background-image: url(searchicon.svg);
+        background-image: url(./assets/searchicon.svg);
         background-position: 10px 10px;
         background-repeat: no-repeat;
         font-size: 14px;

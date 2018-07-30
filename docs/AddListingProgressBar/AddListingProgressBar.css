@@ -1,0 +1,42 @@
+.addListingProgressBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 15px;
+}
+
+.addListingProgressBar progress {
+    display: block;
+    width: 90%;
+    max-width: 840px;
+    height: 10px;
+    -webkit-appearance: none;
+}
+
+.addListingProgressBar label {
+    text-align: end;
+    width: 90%;
+    max-width: 840px;
+    color: #85918D;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.addListingProgressBar label:hover {
+    cursor: default;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #D6DCDA;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+      border-radius: 10px; 
+      background-color: #249974;
+}
+

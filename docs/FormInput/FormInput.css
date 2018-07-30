@@ -1,37 +1,3 @@
-
-.forms__heading {
-    margin: 15px 15px 55px 15px;
-}
-
-.forms__heading h2 {
-    display: inline-block;
-    font-size: 16;
-    font-weight: 500;
-    color: #53504B;
-}
-
-.forms__heading h2:nth-child(2) {
-    color: #C08404;
-}
-
-.forms__heading progress {
-    display: block;
-    width: 90%;
-    max-width: 840px;
-    height: 10px;
-    -webkit-appearance: none;
-}
-
-progress[value]::-webkit-progress-bar {
-    background-color: #D6DCDA;
-    border-radius: 10px;
-}
-
-progress[value]::-webkit-progress-value {
-      border-radius: 10px; 
-      background-color: #249974;
-}
-
 .addListingChips {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,7 +8,6 @@ progress[value]::-webkit-progress-value {
     color: #53504B;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-
 }
 
 .addListingChips > div {
@@ -64,7 +29,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .addListingChips__option {
-    margin-left: 15px;
+    margin: 15px 0 0 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -75,7 +40,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .addListingChips legend {
-    margin: 0 70px 15px 15px;
+    margin: 0 70px 0 15px;
     padding-left: 0;
     padding-right: 0; 
     white-space: normal;
@@ -95,11 +60,48 @@ fieldset {
     padding: 0;
 }
 
+.formInput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #53504B;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}  
+
+.formInput__label {
+    margin: 0 70px 0 15px;
+}
+
+.formInput__input-suffix {
+    display: inline-block;
+}
+
+.formInput__input {
+    margin: 15px 10px 0 15px;
+    width: 240px;
+    height: 36px;
+    border: 1px solid#726F68;
+    border-radius: 3px;
+
+}
+
+.formInput__suffix {
+    margin-right: 15px;
+}
+
 /* Desktop Media Query */
 @media screen and (min-width: 443px) {
 
     .addListingChips legend {
         margin: 0 10% 0 15px;
+    }
+
+    .addListingChips__option {
+        margin: 0 0 0 15px;
     }
     
 }

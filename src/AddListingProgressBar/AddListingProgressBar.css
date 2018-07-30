@@ -1,3 +1,8 @@
+.addListingProgressBar {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
 
 .addListingProgressBar progress {
     display: block;
@@ -9,11 +14,15 @@
 
 .addListingProgressBar label {
     text-align: end;
-    position: absolute;
     width: 90%;
     max-width: 840px;
-    top: 0; 
-    margin-top: 12px;
+    color: #85918D;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.addListingProgressBar label:hover {
+    cursor: default;
 }
 
 progress[value]::-webkit-progress-bar {

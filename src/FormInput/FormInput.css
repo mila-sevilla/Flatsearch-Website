@@ -3,7 +3,6 @@
     align-items: center;
     color: #53504B;
     flex-wrap: wrap;
-
 }
 
 .addListingChips > div {
@@ -22,7 +21,7 @@
 }
 
 .addListingChips__option {
-    margin-left: 15px;
+    margin: 15px 0 0 15px;
     display: flex;
 }
 
@@ -31,7 +30,7 @@
 }
 
 .addListingChips legend {
-    margin: 0 70px 15px 15px;
+    margin: 0 70px 0 15px;
     padding-left: 0;
     padding-right: 0; 
     white-space: normal;
@@ -50,11 +49,43 @@ fieldset {
     padding: 0;
 }
 
+.formInput {
+    display: flex;
+    align-items: center;
+    color: #53504B;
+    flex-wrap: wrap;
+}  
+
+.formInput__label {
+    margin: 0 70px 0 15px;
+}
+
+.formInput__input-suffix {
+    display: inline-block;
+}
+
+.formInput__input {
+    margin: 15px 10px 0 15px;
+    width: 240px;
+    height: 36px;
+    border: 1px solid#726F68;
+    border-radius: 3px;
+
+}
+
+.formInput__suffix {
+    margin-right: 15px;
+}
+
 /* Desktop Media Query */
 @media screen and (min-width: 443px) {
 
     .addListingChips legend {
         margin: 0 10% 0 15px;
+    }
+
+    .addListingChips__option {
+        margin: 0 0 0 15px;
     }
     
 }

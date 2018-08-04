@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 // const sass = require('gulp-sass');
+const glob = require('glob');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const nunjucksRender = require('gulp-nunjucks-render');
@@ -41,7 +42,7 @@ gulp.task('nunjucks', function () {
             }
         }))
         .pipe(nunjucksRender({
-            path: ['src/'] // String or Array
+            path: glob.sync('src/**/*/') // String or Array
         }))
         .pipe(gulp.dest('docs'));
 });

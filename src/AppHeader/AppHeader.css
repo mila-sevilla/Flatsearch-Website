@@ -1,13 +1,10 @@
 .appHeader {
     display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* ? */
     background-color: white;
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-    max-height: 74px; /* ? */
 }
 
 .appHeaderLogo {
@@ -23,20 +20,16 @@
 .appHeaderNav {
     display: flex;
     height: 74px;
-    flex-basis: 25px; /* ? */
 }
 
 .appHeaderNav__item {
-    display: flex;
-    align-items: center;
+    
+    background-color: transparent; /* reset btn styles */
 }
 
 /* Header Menu */
 
 .appHeaderNav__drawerOpenBtn {
-    flex-basis: 25px;
-    justify-content: flex-start; /* ? */
-    height: 100%;
     padding: 0 15px;
 }
 
@@ -96,7 +89,7 @@
         background-image: url('./assets/searchicon.svg');
         background-position: 10px 10px;
         background-repeat: no-repeat;
-        font-size: 14px;
+        font-size: 14px; /* probably not needed */
         -webkit-appearance: none;
     }
         
@@ -107,7 +100,6 @@
         
     .appHeaderSearch input::placeholder {
         color: #B3B1AD;
-        font-family: Montserrat;
         letter-spacing: 1px;
     }
 
@@ -116,11 +108,11 @@
     .appHeaderNav {
         display: flex;
         justify-content: flex-end;
-        flex-basis: auto; /* ? */
     }
 
     .appHeaderNav__item {
         position: relative; /* for the hover effect */
+        line-height: 74px; /* center vertically its child */
         margin: 0 15px;
         padding: 0; /* to reset user agent padding on btn element */
         font-size: 14px;
@@ -146,14 +138,14 @@
     /* Hover effect on nav items */
 
     .appHeaderNav__item::after {
-        position: absolute;
         content: '';
-        transform: scaleX(0);
-        transition: transform 300ms ease-in-out;
-        border-bottom: 2px solid #ffae00;
+        position: absolute;
+        bottom: 0;
         display: block;
         width: 100%;
-        bottom: 0;
+        border-bottom: 2px solid #ffae00;
+        transform: scaleX(0);
+        transition: transform 300ms ease-in-out;
     }
 
     .appHeaderNav__item:hover::after {
@@ -169,8 +161,7 @@
     /* Signed In State */
 
     .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn {
-        display: flex; /* unhide when signed in */
-        flex-basis: 44px; /* ? */ 
+        display: block; /* unhide when signed in */
         padding: 0;
     }
 

@@ -2,22 +2,16 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; /* ? */
     background-color: white;
     font-size: 14px;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-    max-height: 74px; /* ? */
 }
 
 .appHeaderLogo {
@@ -41,28 +35,16 @@
     display: -ms-flexbox;
     display: flex;
     height: 74px;
-    -ms-flex-preferred-size: 25px;
-        flex-basis: 25px; /* ? */
 }
 
 .appHeaderNav__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    
+    background-color: transparent; /* reset btn styles */
 }
 
 /* Header Menu */
 
 .appHeaderNav__drawerOpenBtn {
-    -ms-flex-preferred-size: 25px;
-        flex-basis: 25px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; /* ? */
-    height: 100%;
     padding: 0 15px;
 }
 
@@ -122,7 +104,7 @@
         background-image: url('./assets/searchicon.svg');
         background-position: 10px 10px;
         background-repeat: no-repeat;
-        font-size: 14px;
+        font-size: 14px; /* probably not needed */
         -webkit-appearance: none;
     }
         
@@ -133,25 +115,21 @@
         
     .appHeaderSearch input::-webkit-input-placeholder {
         color: #B3B1AD;
-        font-family: Montserrat;
         letter-spacing: 1px;
     }
         
     .appHeaderSearch input:-ms-input-placeholder {
         color: #B3B1AD;
-        font-family: Montserrat;
         letter-spacing: 1px;
     }
         
     .appHeaderSearch input::-ms-input-placeholder {
         color: #B3B1AD;
-        font-family: Montserrat;
         letter-spacing: 1px;
     }
         
     .appHeaderSearch input::placeholder {
         color: #B3B1AD;
-        font-family: Montserrat;
         letter-spacing: 1px;
     }
 
@@ -164,12 +142,11 @@
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto; /* ? */
     }
 
     .appHeaderNav__item {
         position: relative; /* for the hover effect */
+        line-height: 74px; /* center vertically its child */
         margin: 0 15px;
         padding: 0; /* to reset user agent padding on btn element */
         font-size: 14px;
@@ -195,18 +172,18 @@
     /* Hover effect on nav items */
 
     .appHeaderNav__item::after {
-        position: absolute;
         content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid #ffae00;
         -webkit-transform: scaleX(0);
                 transform: scaleX(0);
         -webkit-transition: -webkit-transform 300ms ease-in-out;
         transition: -webkit-transform 300ms ease-in-out;
         transition: transform 300ms ease-in-out;
         transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-        border-bottom: 2px solid #ffae00;
-        display: block;
-        width: 100%;
-        bottom: 0;
     }
 
     .appHeaderNav__item:hover::after {
@@ -223,11 +200,7 @@
     /* Signed In State */
 
     .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; /* unhide when signed in */
-        -ms-flex-preferred-size: 44px;
-            flex-basis: 44px; /* ? */ 
+        display: block; /* unhide when signed in */
         padding: 0;
     }
 

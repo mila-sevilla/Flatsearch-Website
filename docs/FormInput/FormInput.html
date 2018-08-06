@@ -13,7 +13,7 @@
 
 <body>
 
-    <br> </br>
+    <br> <br> <!-- brs are self closing so </br> was wrong -->
     
     <fieldset>
         <div class="addListingChips">
@@ -32,18 +32,41 @@
         </div>
     </fieldset>
 
-    <br> </br>
+    <br> <br> <!-- brs are self closing so </br> was wrong -->
 
     <div class="formInput formInput--text">
         <div>
             <label class="formInput__label" for="rent">Rent</label>
-            <div class="formInput__input-suffix"> 
-                <input class="formInput__input" type="text" name="rent"></input>
-                <span class="formInput__suffix">CZK</span>
+            <div class="formInput__input"> 
+                <div> 
+                    <input type="text" name="rent"> <!-- </input> inputs are self closing! -->
+                    <span>CZK</span>
+                </div>
+                <small class="formInput__error">You must provide a valid email</small>
             </div>
         </div>
-        <small class="formInput__error">You must provide a valid email</small>
     </div>
+
+    <!--
+
+        This markup should be enough to achieve what we want for 
+        input type text.
+        Error is inside the div together with input and suffix because it will
+        be position absolute ( as I told you ). We need that the space doesn't
+        collapse when the error is not there, so to achieve that we set 
+        padding bottom somewhere ( probably on div.formInput ) and we place
+        the error element inside that padding area.
+
+    <div class="formInput formInput--text">
+        <label class="formInput__label" for="rent">Rent</label>
+        <div>
+            <input class="formInput__input" type="text" name="rent"></input>
+            <span class="formInput__suffix">CZL</span>
+            <small class="formInput__error">error</small>
+        </div>
+    </div>
+
+    -->
 
     <br>
     <br>
@@ -51,11 +74,12 @@
     <div class="formInput formInput--textarea">
         <div>
             <label class="formInput__label" for="City">City</label>
-            <input class="formInput__input formInput__input--textarea" type="textarea" name="city" placeholder="Prague"></input>
+            <input class="formInput__input formInput__input--textarea" type="textarea" name="description"></input>
         </div>
         <small class="formInput__error">This field is required</small>
     </div>
 
+    
     <div class="formInput formInput--checkbox">
         <div>
             <input class="formInput__input formInput__input--checkbox" type="checkbox" name="city"></input>

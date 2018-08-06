@@ -1,0 +1,252 @@
+.appHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; /* ? */
+    background-color: white;
+    font-size: 14px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    max-height: 74px; /* ? */
+}
+
+.appHeaderLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+
+.appHeaderLogo > a {
+    padding: 5px;
+}
+
+.appHeaderNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 74px;
+    -ms-flex-preferred-size: 25px;
+        flex-basis: 25px; /* ? */
+}
+
+.appHeaderNav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* Header Menu */
+
+.appHeaderNav__drawerOpenBtn {
+    -ms-flex-preferred-size: 25px;
+        flex-basis: 25px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; /* ? */
+    height: 100%;
+    padding: 0 15px;
+}
+
+.appHeaderNav__drawerOpenBtn > span {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 17px;
+}
+
+/* bg image on pseudo element so that it covers up the letter inside the span */
+.appHeaderNav__drawerOpenBtn > span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: url('./assets/menu.svg') no-repeat, white; /* 25x17 */
+}
+
+/* hide on mobile */
+@media screen and (max-width: 889px) {
+
+    /* hide all nav items except drawerOpenBtn */
+    .appHeaderNav__item:not(.appHeaderNav__drawerOpenBtn) {
+        display: none;
+    }
+
+    .appHeaderSearch {
+        display: none;
+    }
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: 890px) {
+    
+    .appHeaderLogo,
+    .appHeaderSearch,
+    .appHeaderNav {
+        width: 33.33%;
+    }
+
+    /* Header Search */
+
+    .appHeaderSearch {
+        padding-left: 15px;
+    }
+                
+    .appHeaderSearch input {
+        max-width: 293px;
+        width: 100%;
+        height: 45px;
+        border: 1px solid #C9C5BD;
+        border-radius: 3px;
+        padding: 0 100px 0 40px;
+        background-image: url('./assets/searchicon.svg');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        font-size: 14px;
+        -webkit-appearance: none;
+    }
+        
+    .appHeaderSearch input:focus {
+        outline: none;
+        border: 1px solid #53504B;
+    }
+        
+    .appHeaderSearch input::-webkit-input-placeholder {
+        color: #B3B1AD;
+        font-family: Montserrat;
+        letter-spacing: 1px;
+    }
+        
+    .appHeaderSearch input:-ms-input-placeholder {
+        color: #B3B1AD;
+        font-family: Montserrat;
+        letter-spacing: 1px;
+    }
+        
+    .appHeaderSearch input::-ms-input-placeholder {
+        color: #B3B1AD;
+        font-family: Montserrat;
+        letter-spacing: 1px;
+    }
+        
+    .appHeaderSearch input::placeholder {
+        color: #B3B1AD;
+        font-family: Montserrat;
+        letter-spacing: 1px;
+    }
+
+    /* Header Nav */
+
+    .appHeaderNav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto; /* ? */
+    }
+
+    .appHeaderNav__item {
+        position: relative; /* for the hover effect */
+        margin: 0 15px;
+        padding: 0; /* to reset user agent padding on btn element */
+        font-size: 14px;
+        text-decoration: none;
+        color: #53504B;
+    }
+
+    /* these styles will probably be moved to button component */
+    .appHeaderNav__logInBtn > button {
+        width: 70px;
+        height: 30px;
+        padding: 5px;
+        color: white;
+        border: 1px solid #249974;
+        border-radius: 3px;
+        background-color: #249974;
+    }
+
+    .appHeaderNav__logInBtn button:hover {
+        background-color: #177456; 
+    }
+
+    /* Hover effect on nav items */
+
+    .appHeaderNav__item::after {
+        position: absolute;
+        content: '';
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+        -webkit-transition: -webkit-transform 300ms ease-in-out;
+        transition: -webkit-transform 300ms ease-in-out;
+        transition: transform 300ms ease-in-out;
+        transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+        border-bottom: 2px solid #ffae00;
+        display: block;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .appHeaderNav__item:hover::after {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+    
+    /* Hide drawerOpenBtn when not signed in */
+
+    .appHeaderNav__drawerOpenBtn {
+        display: none;
+    }
+
+    /* Signed In State */
+
+    .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; /* unhide when signed in */
+        -ms-flex-preferred-size: 44px;
+            flex-basis: 44px; /* ? */ 
+        padding: 0;
+    }
+
+    .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn > span {
+        width: 44px;
+        height: 44px;
+        line-height: 44px; /* to center vertially */
+        color: #249974;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #249974;
+        border-radius: 50%;
+        /* background-image: url(./assets/account_pers2.svg) contain; */
+    }
+
+    /* remove hamburger icon background */
+
+    .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn > span::after {
+        content: none;
+    }
+
+} /* End of Desktop Media Query */

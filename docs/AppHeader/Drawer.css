@@ -24,14 +24,15 @@
 }
 
 .drawer-sidebar {
+    position: relative;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 235px;
             flex: 1 0 235px;
     max-width: 235px;
-    background-color: #FCFCFC;
-    margin: 0;
     height: 100%;
-    border-radius: 3px 0 0 3px;
+    padding: 23px;
+    background-color: #FCFCFC;
+    border-radius: 3px 0 0 3px; /* not visible */
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
@@ -45,7 +46,6 @@
     opacity: 0;
     -webkit-transition: opacity .05s linear;
     transition: opacity .05s linear;
-    left: 100%;
 }
 
 .drawer--active > .drawer-overlay {
@@ -55,13 +55,11 @@
 }
 
 .drawer a {
-    margin: 0 23px;
+    /* margin: 0 23px; */
     text-decoration: none;
     font-size: 16px;
     color: #818181;
-    font-family: Montserrat;
     background-color: #FCFCFC;
-    width: 189px;
 }
 
     /* Header Menu Close Button */
@@ -82,7 +80,7 @@
     
     .drawer__closeBtn:before, .drawer__closeBtn:after {
         position: absolute;
-        content: ' ';
+        content: '';
         height: 15px;
         width: 2px;
         background-color: #818181;
@@ -110,18 +108,13 @@
     padding: 18px 0px;
 }
 
-.drawer__icon span {
-    height: 100%;
+.drawer__icon > span {
     padding-left: 12px; 
     font-weight: 300;
 }
 
-.drawer__icon span:hover {
+.drawer__icon:hover > span {
     font-weight: 400;
-}
-
-.drawer .drawer__icon__home {
-    margin-top: 40px;
 }
 
 .drawer__icon:hover > svg path {
@@ -135,31 +128,39 @@
     stroke: #FFAE00;
 }
   
-.drawer__icon svg path {
+.drawer__icon > svg path {
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
 
 /* Drawer - Signed In */
 
-.drawer .drawer__profilePic {
+.drawer__profilePic {
+    display: block;
     background-image: url('./assets/account_pers2.svg');
     background-repeat: no-repeat;
     background-position: center top;
     background-position-y: 0px;
-    border-bottom: 1px solid #D7D3CE;
-    padding: 100px 0px 20px 0px;
+    padding: 100px 0px 18px 0px;
     text-align: center;
     font-weight: 300;
-    display: block;
-    margin-top: 10px;
 }
 
-.drawer__icon__setting {
-    border-bottom: 1px solid #D7D3CE;
-    padding-bottom: 20px;
+.drawer__profilePic > span {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    margin-bottom: 18px;
+    line-height: 85px;
+    color: #249974;
+    font-size: 34px;
+    font-weight: 500;
+    border: 1px solid #249974;
+    border-radius: 50%;
 }
 
-.drawer__icon__signOut {
-    padding-top: 20px;
+.drawer__divider {
+    margin: 2px 0;
+    border: 0; /* otherwise weird shadow */
+    border-top: 1px solid #D7D3CE;
 }

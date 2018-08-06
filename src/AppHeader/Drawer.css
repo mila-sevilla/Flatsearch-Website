@@ -1,0 +1,142 @@
+/* Header Menu Drawer */
+.drawer {
+    position: fixed;
+    width: 100%;
+    left: 100%;
+    display: flex;
+    height: 100%;
+    top: 0;
+    transition: transform .2s linear .06s;
+}
+
+.drawer--active {
+    transform: translateX(-100%);
+    transition: transform .3s ease-out;
+}
+
+.drawer-sidebar {
+    flex: 1 0 235px;
+    max-width: 235px;
+    background-color: #FCFCFC;
+    margin: 0;
+    height: 100%;
+    border-radius: 3px 0 0 3px;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+}
+
+.drawer-overlay {
+    flex-grow: 1;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity .05s linear;
+    left: 100%;
+}
+
+.drawer--active > .drawer-overlay {
+    opacity: 1;
+    transition: opacity .3s linear .3s;
+}
+
+.drawer a {
+    margin: 0 23px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    font-family: Montserrat;
+    background-color: #FCFCFC;
+    width: 189px;
+}
+
+    /* Header Menu Close Button */
+    .drawer__closeBtn {
+        position: absolute;
+        right: 190px;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        opacity: 0.6;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    .drawer__closeBtn:hover {
+        opacity: 1;
+    }
+    
+    .drawer__closeBtn:before, .drawer__closeBtn:after {
+        position: absolute;
+        content: ' ';
+        height: 15px;
+        width: 2px;
+        background-color: #818181;
+        top: 10px;
+    }
+
+    .drawer__closeBtn:before {
+        transform: rotate(45deg);
+    }
+
+    .drawer__closeBtn:after {
+        transform: rotate(-45deg);
+    }
+    /* End Header Menu Close Button */
+
+.drawer__icon {
+    display: flex;
+    align-items: center;
+    padding: 18px 0px;
+}
+
+.drawer__icon span {
+    height: 100%;
+    padding-left: 12px; 
+    font-weight: 300;
+}
+
+.drawer__icon span:hover {
+    font-weight: 400;
+}
+
+.drawer .drawer__icon__home {
+    margin-top: 40px;
+}
+
+.drawer__icon:hover > svg path {
+    fill: #FFAE00;
+    transition: all ease 0.3s;
+}
+
+.drawer__icon:hover .drawer__icon__nofill {
+    fill: none;
+    stroke: #FFAE00;
+}
+  
+.drawer__icon svg path {
+    transition: all ease 0.3s;
+}
+
+/* Drawer - Signed In */
+
+.drawer .drawer__profilePic {
+    background-image: url('./assets/account_pers2.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-position-y: 0px;
+    border-bottom: 1px solid #D7D3CE;
+    padding: 100px 0px 20px 0px;
+    text-align: center;
+    font-weight: 300;
+    display: block;
+    margin-top: 10px;
+}
+
+.drawer__icon__setting {
+    border-bottom: 1px solid #D7D3CE;
+    padding-bottom: 20px;
+}
+
+.drawer__icon__signOut {
+    padding-top: 20px;
+}

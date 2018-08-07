@@ -34,20 +34,9 @@
 }
 
 .appHeaderNav__drawerOpenBtn > span {
-    position: relative;
     display: block;
     width: 25px;
     height: 17px;
-}
-
-/* bg image on pseudo element so that it covers up the letter inside the span */
-.appHeaderNav__drawerOpenBtn > span::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background: url('./assets/menu.svg') no-repeat, white; /* 25x17 */
 }
 
@@ -60,6 +49,11 @@
     }
 
     .appHeaderSearch {
+        display: none;
+    }
+
+    /* hide the avatar on mobile */
+    .appHeaderNav__drawerOpenBtn > span > .avatar {
         display: none;
     }
 }
@@ -168,19 +162,14 @@
     .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn > span {
         width: 44px;
         height: 44px;
-        line-height: 44px; /* to center vertially */
-        color: #249974;
-        font-size: 16px;
-        font-weight: 500;
-        border: 1px solid #249974;
-        border-radius: 50%;
-        /* background-image: url(./assets/account_pers2.svg) contain; */
-    }
-
-    /* remove hamburger icon background */
-
-    .appHeaderNav--signedIn > .appHeaderNav__drawerOpenBtn > span::after {
-        content: none;
+        font-size: 16px; /* important to define because of Avatar */
+        background-image: none; /* remove hamburger icon bg */
+        
+        /* if user has a profile pic, it will go here as a bg image */
+        /*
+            background-image: url('profile.png');
+            border-radius: 50%;
+        */
     }
 
 } /* End of Desktop Media Query */

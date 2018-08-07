@@ -146,17 +146,14 @@
     font-weight: 300;
 }
 
+/* parent of avatar or profile image */
 .drawer__profilePic > span {
     display: inline-block;
     width: 85px;
     height: 85px;
     margin-bottom: 18px;
     line-height: 85px;
-    color: #249974;
     font-size: 34px;
-    font-weight: 500;
-    border: 1px solid #249974;
-    border-radius: 50%;
 }
 
 .drawer__divider {

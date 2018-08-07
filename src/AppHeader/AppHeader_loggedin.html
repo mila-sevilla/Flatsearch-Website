@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../base.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./AppHeader.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./Drawer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../Avatar/Avatar.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">   
 </head>
 <body>
@@ -30,7 +31,9 @@
             <a href="#" class="appHeaderNav__item">Add Listing</a>
             <a href="#" class="appHeaderNav__item">Favorites</a>
             <button class="appHeaderNav__item appHeaderNav__drawerOpenBtn" id="menu-button-js">
-                <span>M</span>
+                <span> <!-- styles on span -->
+                    {% include "../Avatar/Avatar.html" %}
+                </span>
             </button>  
         </nav>
 
@@ -39,7 +42,9 @@
             <div class="drawer-sidebar"> 
                 <button class="drawer__closeBtn closeBtn-js"></button>
                 <a class="drawer__profilePic" href="#">
-                    <span> M </span>
+                    <span> 
+                        {% include "../Avatar/Avatar.html" %}
+                    </span>
                     <br>
                     Mila Sevilla Zhou
                 </a>

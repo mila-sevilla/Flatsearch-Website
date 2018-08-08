@@ -29,7 +29,7 @@
 }
 
 .addListingChips__option {
-    margin: 15px 0 0 15px;
+    margin: 0 0 0 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -40,7 +40,7 @@
 }
 
 .addListingChips legend {
-    margin: 0 70px 0 15px;
+    margin: 15px 70px 15px 15px;
     padding-left: 0;
     padding-right: 0; 
     white-space: normal;
@@ -60,7 +60,7 @@ fieldset {
     padding: 0;
 }
 
-.formInput {
+.formInput > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -73,35 +73,51 @@ fieldset {
 }  
 
 .formInput__label {
-    margin: 0 70px 0 15px;
-}
-
-.formInput__input-suffix {
-    display: inline-block;
+    margin: 15px 70px 15px 15px;
 }
 
 .formInput__input {
-    margin: 15px 10px 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+}
+
+.formInput__input > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.formInput__input > div > input {
+    margin: 0 10px 0 15px;
     width: 240px;
     height: 36px;
     border: 1px solid#726F68;
     border-radius: 3px;
-
 }
 
-.formInput__suffix {
+.formInput__input > div > span {
     margin-right: 15px;
 }
 
-/* Desktop Media Query */
-@media screen and (min-width: 443px) {
-
-    .addListingChips legend {
-        margin: 0 10% 0 15px;
-    }
-
-    .addListingChips__option {
-        margin: 0 0 0 15px;
-    }
-    
+.formInput__error {
+    margin: 10px 0 0 15px;
+    padding: 5px 0 0 35px;  
+    height: 24px;
+    background-image: url('./assets/warning.svg');
+    background-repeat: no-repeat; 
+    color: #EB5757; 
 }
+
+/* Desktop Media Query */
+
+/*  @media screen and (min-width: 443px) */

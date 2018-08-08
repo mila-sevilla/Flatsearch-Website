@@ -65,4 +65,4 @@ gulp.task('copy', function () {
 })
 
 gulp.task('default', ['serve']);
-gulp.task('build', ['nunjucks', 'autoprefixer', 'copy'])
+gulp.task('build', ['nunjucks', 'sass','autoprefixer', 'copy'])

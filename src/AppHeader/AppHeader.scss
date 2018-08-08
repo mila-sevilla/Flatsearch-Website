@@ -1,0 +1,198 @@
+// media breakpoints
+$breakpoint-header: 890px;
+$breakpoint-header-max: $breakpoint-header - 1;
+
+// outer gutter width
+$outer-gutter-width: 15px; // consider an odd number
+
+// color variables
+$color-primary: #ffae00;
+$color-secondary: #249974;;
+$color-secondary-dark: #177456;
+$color-text-light: #B3B1AD;
+$color-text-dark: #53504B;
+$color-input-border: #C9C5BD;
+
+.appHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.appHeaderLogo {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+
+    > a {
+        padding: 5px;
+    }
+}
+
+.appHeaderNav {
+    display: flex;
+    height: 74px;
+}
+
+.appHeaderNav__item {
+    // consider moving this to normalize
+    background-color: transparent; /* reset btn styles */
+}
+
+/* Header Menu */
+
+.appHeaderNav__drawerOpenBtn {
+    padding: 0 $outer-gutter-width;
+
+    > span {
+        display: block;
+        width: 25px;
+        height: 17px;
+        background: url('./assets/menu.svg') no-repeat, white;
+    }
+}
+
+/* hide on mobile */
+@media screen and (max-width: $breakpoint-header-max) {
+
+    /* hide all nav items except drawerOpenBtn */
+    .appHeaderNav__item:not(.appHeaderNav__drawerOpenBtn) {
+        display: none;
+    }
+
+    .appHeaderSearch {
+        display: none;
+    }
+
+    /* hide the avatar on mobile */
+    .appHeaderNav__drawerOpenBtn > span > .avatar {
+        display: none;
+    }
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: $breakpoint-header) {
+    
+    /* Layout */
+
+    .appHeaderLogo,
+    .appHeaderSearch,
+    .appHeaderNav {
+        width: 33.33%;
+    }
+
+    /* Header Search */
+
+    .appHeaderSearch {
+        padding-left: $outer-gutter-width;
+
+        input {
+            max-width: 293px;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #C9C5BD;
+            border-radius: 3px;
+            padding: 0 100px 0 40px; /* 100px? */
+            background-image: url('./assets/searchicon.svg');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            font-size: 14px; /* probably not needed */
+            -webkit-appearance: none;
+
+            &:focus {
+                outline: none;
+                border: 1px solid #53504B;
+            }
+
+            &::placeholder {
+                color: #B3B1AD;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    /* Header Nav */
+
+    .appHeaderNav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .appHeaderNav__item {
+        line-height: 74px; /* center vertically its child */
+        margin: 0 $outer-gutter-width;
+        padding: 0; /* to reset user agent padding on btn element */
+        font-size: 14px; /* probably not needed */
+        text-decoration: none;
+        color: #53504B;
+    }
+
+    /* Hover effect on nav items */
+
+    .appHeaderNav__item {
+        position: relative;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            border-bottom: 2px solid $color-primary;
+            transform: scaleX(0);
+            transition: transform 300ms ease-in-out;
+        }
+    
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
+    /* these styles will probably be moved to button component */
+    .appHeaderNav__logInBtn > button {
+        width: 70px;
+        height: 30px;
+        padding: 5px;
+        color: white;
+        border: 1px solid $color-secondary;
+        border-radius: 3px;
+        background-color: $color-secondary;
+
+        &:hover {
+            background-color: $color-secondary-dark; 
+        }
+    }
+
+    /* Hide drawerOpenBtn when not signed in */
+
+    .appHeaderNav__drawerOpenBtn {
+        display: none;
+    }
+
+    /* Signed In State */
+
+    .appHeaderNav--signedIn {
+        
+        > .appHeaderNav__drawerOpenBtn {
+            display: block; /* unhide when signed in */
+            padding: 0;
+
+            > span {
+                width: 44px;
+                height: 44px;
+                font-size: 16px; /* important to define because of Avatar */
+                background-image: none; /* remove hamburger icon bg */
+                
+                /* if user has a profile pic, it will go here as a bg image */
+                /*
+                    background-image: url('profile.png');
+                    border-radius: 50%;
+                */
+            }
+        }
+    }
+
+} /* End of Desktop Media Query */

@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-// const sass = require('gulp-sass');
+const sass = require('gulp-sass');
 const glob = require('glob');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
@@ -16,6 +16,7 @@ gulp.task('serve', function () {
     });
     gulp.watch("./src/**/*.{html,njk}", ['nunjucks']);
     gulp.watch("./src/**/*.css", ['autoprefixer']);
+    gulp.watch("./src/**/*.scss", ['sass']);
     gulp.watch("./docs/**/*.{html,css}").on('change', browserSync.reload);
 });
 
@@ -48,12 +49,15 @@ gulp.task('nunjucks', function () {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-// gulp.task('sass', function() {
-//     return gulp.src("app/scss/*.scss")
-//         .pipe(sass())
-//         .pipe(gulp.dest("docs"))
-//         .pipe(browserSync.stream());
-// });
+gulp.task('sass', function() {
+    return gulp.src("src/**/*.scss")
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
+        .pipe(gulp.dest("docs"))
+        .pipe(browserSync.stream());
+});
 
 gulp.task('copy', function () {
     return gulp.src('./src/**/*.{svg,png,jpg,jpeg,gif,json,js}')

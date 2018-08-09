@@ -13,7 +13,7 @@
 
 <body>
 
-    <br> <br> <!-- brs are self closing so </br> was wrong -->
+    <br> <br> 
     
     <fieldset>
         <div class="addListingChips">
@@ -32,51 +32,24 @@
         </div>
     </fieldset>
 
-    <br> <br> <!-- brs are self closing so </br> was wrong -->
-
-    <div class="formInput formInput--text">
-        <div>
-            <label class="formInput__label" for="rent">Rent</label>
-            <div class="formInput__input"> 
-                <div> 
-                    <input type="text" name="rent"> <!-- </input> inputs are self closing! -->
-                    <span>CZK</span>
-                </div>
-                <small class="formInput__error">You must provide a valid email</small>
-            </div>
-        </div>
-    </div>
-
-    <!--
-
-        This markup should be enough to achieve what we want for 
-        input type text.
-        Error is inside the div together with input and suffix because it will
-        be position absolute ( as I told you ). We need that the space doesn't
-        collapse when the error is not there, so to achieve that we set 
-        padding bottom somewhere ( probably on div.formInput ) and we place
-        the error element inside that padding area.
-
     <div class="formInput formInput--text">
         <label class="formInput__label" for="rent">Rent</label>
         <div>
             <input class="formInput__input" type="text" name="rent"></input>
-            <span class="formInput__suffix">CZL</span>
-            <small class="formInput__error">error</small>
+            <span class="formInput__suffix">CZK</span>
+            <small class="formInput__error">This field is required</small>
         </div>
     </div>
 
-    -->
-
-    <br>
-    <br>
-
     <div class="formInput formInput--textarea">
+        <label class="formInput__label" for="City">Description</label>
         <div>
-            <label class="formInput__label" for="City">City</label>
-            <input class="formInput__input formInput__input--textarea" type="textarea" name="description"></input>
+            <input class="formInput__input formInput__input--textarea" type="textarea" name="description" 
+                placeholder="Please enter a description of the flat/ room here"
+                maxlength="5000">
+            </input>
+            <small class="formInput__error">This field is required</small>
         </div>
-        <small class="formInput__error">This field is required</small>
     </div>
 
     

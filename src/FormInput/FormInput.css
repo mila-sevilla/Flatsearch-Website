@@ -30,9 +30,9 @@
 }
 
 .addListingChips legend {
-    margin: 15px 70px 15px 15px;
-    padding-left: 0;
-    padding-right: 0; 
+    margin: 15px 0 15px 15px;
+    width: 130px;
+    padding: 0;
     white-space: normal;
 }
 
@@ -43,35 +43,26 @@
 
 input[type=checkbox]:checked + label {
     border: 1px solid #FFAE00;
-  } 
+} 
 
-fieldset {
-    padding: 0;
-}
-
-.formInput > div {
+.formInput {
     display: flex;
-    align-items: center;
     color: #53504B;
     flex-wrap: wrap;
+    flex-direction: row;
 }  
 
+.formInput > div {
+    padding-bottom: 40px;
+}
+
 .formInput__label {
-    margin: 15px 70px 15px 15px;
+    margin: 9px 0 9px 15px;
+    color: #53504B;
+    width: 130px;
 }
 
 .formInput__input {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-
-}
-
-.formInput__input > div {
-    flex-direction: row;
-}
-
-.formInput__input > div > input {
     margin: 0 10px 0 15px;
     width: 240px;
     height: 36px;
@@ -79,11 +70,12 @@ fieldset {
     border-radius: 3px;
 }
 
-.formInput__input > div > span {
+.formInput > div > span {
     margin-right: 15px;
 }
 
 .formInput__error {
+    position: absolute;
     margin: 10px 0 0 15px;
     padding: 5px 0 0 35px;  
     height: 24px;
@@ -91,6 +83,13 @@ fieldset {
     background-repeat: no-repeat; 
     color: #EB5757; 
 }
+
+.formInput__input--textarea {
+    height: 100px;
+    width: 290px;
+}
+
+
 
 /* Desktop Media Query */
 

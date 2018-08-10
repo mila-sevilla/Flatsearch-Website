@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App Header - Signed In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../base.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./AppHeader.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./Drawer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../Avatar/Avatar.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">   
+</head>
+<body>
+    <header class="appHeader"> 
+
+        <div class="appHeaderSearch">
+            <form> 
+                <input type="search" placeholder="Enter City..."> 
+            </form>
+        </div>
+
+        <div class="appHeaderLogo"> 
+            <a href="#"> 
+                <img src="./assets/logo.svg" alt="Flatsearch.cz"/> 
+            </a>
+        </div>
+        
+        <nav class="appHeaderNav appHeaderNav--signedIn"> 
+            <a href="#" class="appHeaderNav__item">Add Listing</a>
+            <a href="#" class="appHeaderNav__item">Favorites</a>
+            <button class="appHeaderNav__item appHeaderNav__drawerOpenBtn" id="menu-button-js">
+                <span> <!-- styles on span -->
+                    {% include "../Avatar/Avatar.html" %}
+                </span>
+            </button>  
+        </nav>
+
+        <div id="drawer-js" class="drawer drawer--signedIn">
+            <div class="drawer-overlay closeBtn-js"> </div>
+            <div class="drawer-sidebar"> 
+                <button class="drawer__closeBtn closeBtn-js"></button>
+                <a class="drawer__profilePic" href="#">
+                    <span> 
+                        {% include "../Avatar/Avatar.html" %}
+                    </span>
+                    <br>
+                    Mila Sevilla Zhou
+                </a>
+
+                <hr class="drawer__divider">
+
+                <a class="drawer__icon" href="#"> 
+
+                    {% include "assets/home.svg" %}
+
+                    <span> Home </span>
+                </a>
+
+                <a class="drawer__icon" href="#"> 
+                    
+                    {% include "assets/pencil.svg" %}
+
+                    <span> Add Listing </span>
+                </a>
+
+                <a class="drawer__icon" href="#"> 
+                    
+                    {% include "assets/heart.svg" %}
+
+                    <span> Your Favorites </span>
+                </a>
+
+                <a class="drawer__icon" href="#"> 
+                    
+                    {% include "assets/account.svg" %}
+
+                    <span> Edit Profile </span>
+                </a>
+
+                <a class="drawer__icon" href="#"> 
+                    
+                    {% include "assets/folder.svg" %}
+
+                    <span> See Your Listings </span>
+                </a>
+ 
+                <a class="drawer__icon" href="#"> 
+
+                    {% include "assets/setting.svg" %}
+
+                    <span> Account Settings </span>
+                </a>
+
+                <hr class="drawer__divider">
+                
+                <a class="drawer__icon drawer__icon__signOut" href="#"> 
+
+                    {% include "assets/signout.svg" %}
+
+                    <span> Sign Out </span>
+                </a>
+                
+            </div>
+        </div>
+
+    </header>
+
+    <script>
+        window.onload = function() {
+            var menuButton = document.getElementById('menu-button-js');
+            var drawer = document.getElementById('drawer-js');
+            var closeBtns = [].slice.call(document.querySelectorAll('.closeBtn-js'));
+            menuButton.addEventListener('click', function() {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    drawer.classList.remove('drawer--active');
+                } else {
+                    this.className += ' active';
+                    drawer.className += ' drawer--active';
+                }
+            })
+            closeBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    menuButton.classList.remove('active');
+                    drawer.classList.remove('drawer--active');            
+                })
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import "spacing.scss";
+
+.layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &-body {
+        flex: 1 0 auto;
+        display: flex;
+    }
+
+    &__scrollWithin {
+        height: 100%;
+        overflow: auto;
+    }
+}
+
+// from bootstrap
+.col-one-fourth {
+    flex: 0 0 25%;
+    max-width: 25%; 
+}
+
+.col-auto {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;   
+}
+
+// temporary - just for mocking
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1dde7
+}
+
+.map {
+    background: url('./map.png'), black;
+    background-position: center;
+}
+

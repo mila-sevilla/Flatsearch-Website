@@ -1,0 +1,14 @@
+.pad-all--4-8-16 {
+  padding: 4px; }
+  @media (min-width: 600px) {
+    .pad-all--4-8-16 {
+      padding: 8px; } }
+  @media (min-width: 1300px) {
+    .pad-all--4-8-16 {
+      padding: 16px; } }
+
+.pad-all--8-8-16 {
+  padding: 8px; }
+  @media (min-width: 1300px) {
+    .pad-all--8-8-16 {
+      padding: 16px; } }

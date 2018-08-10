@@ -1,1 +1,36 @@
-fixed width layout form homepage and view listing page.
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../base.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./Layout.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../AppHeader/AppHeader.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">   
+</head>
+<body>
+
+    <div class="layout">
+        <header class="appHeader">
+            Header
+            <nav class="appHeaderNav"></nav>
+        </header>
+        <main class="layout-body pad-all--4-8-16">
+            <div class="pad-all--4-8-16 col-one-fourth">
+                <div class="layout__scrollWithin">
+                    <div class="content">aside</div>
+                </div>
+            </div>
+            <div class="pad-all--4-8-16 col-auto">
+                <div class="layout__scrollWithin">
+                    <div class="content" style="height: 150%">main area</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

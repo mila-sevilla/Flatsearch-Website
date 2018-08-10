@@ -9,19 +9,26 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../base.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./Layout.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../AppHeader/AppHeader.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../AppHeader/Drawer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../Flatcard/flatcard.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">   
 </head>
 <body>
 
     <div class="layout">
-        <header class="appHeader">
-            Header
-            <nav class="appHeaderNav"></nav>
-        </header>
+
+        {% include "../AppHeader/AppHeader.html" %}
+
         <main class="layout-body pad-all--4-8-16">
-            <div class="pad-all--4-8-16 col-one-fourth">
+            <div class="pad-all--4-8-16 col-482px">
                 <div class="layout__scrollWithin">
-                    <div class="content">aside</div>
+                    <div class="temp-flatcard-content">
+
+                        {% include "../Flatcard/Flatcard.html" %}
+                        {% include "../Flatcard/Flatcard.html" %}
+                        {% include "../Flatcard/Flatcard.html" %}
+
+                    </div>
                 </div>
             </div>
             <div class="pad-all--4-8-16 col-auto">

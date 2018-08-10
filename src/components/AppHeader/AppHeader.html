@@ -1,109 +1,94 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>App Header</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../../base.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./AppHeader.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./Drawer.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">   
-</head>
-<body>
-    <header class="appHeader"> 
+<header class="appHeader"> 
 
-        <div class="appHeaderSearch">
-            <form> 
-                <input type="search" placeholder="Enter City..."> 
-            </form>
+    <div class="appHeaderSearch">
+        <form> 
+            <input type="search" placeholder="Enter City..."> 
+        </form>
+    </div>
+
+    <div class="appHeaderLogo"> 
+        <a href="#"> 
+            <img src="/components/AppHeader/assets/logo.svg" alt="Flatsearch.cz"/> 
+        </a>
+    </div>
+    
+    <nav class="appHeaderNav"> 
+        <a href="#" class="appHeaderNav__item">Add Listing</a>
+        <button class="appHeaderNav__item">Sign Up</button>
+        <div class="appHeaderNav__item appHeaderNav__logInBtn">
+            <button>Log In</button> 
         </div>
+        <button class="appHeaderNav__item appHeaderNav__drawerOpenBtn" id="menu-button-js">
+            <span> <!-- empty when not signed in --> </span>
+        </button>  
+    </nav>
 
-        <div class="appHeaderLogo"> 
-            <a href="#"> 
-                <img src="./assets/logo.svg" alt="Flatsearch.cz"/> 
+    <div id="drawer-js" class="drawer">
+        <div class="drawer-overlay closeBtn-js"> </div>
+        <div class="drawer-sidebar"> 
+
+            <button class="drawer__closeBtn closeBtn-js"></button>
+
+            <a class="drawer__profilePic" href="#">
+                <span></span>
+
             </a>
+
+            <hr class="drawer__divider">
+
+            <a class="drawer__icon" href="#"> 
+
+                {% include "assets/home.svg" %}
+
+                <span> Home </span>
+            </a>
+
+            <a class="drawer__icon" href="#"> 
+                    
+                {% include "assets/pencil.svg" %}
+
+                <span> Add Listing </span>
+            </a>
+
+            <a class="drawer__icon" href="#"> 
+                    
+                {% include "assets/account.svg" %}
+
+                <span> Sign Up </span>
+            </a>
+
+            <a class="drawer__icon" href="#"> 
+                    
+                {% include "assets/login.svg" %}
+
+                <span> Sign In </span>
+            </a>
+            
         </div>
-        
-        <nav class="appHeaderNav"> 
-            <a href="#" class="appHeaderNav__item">Add Listing</a>
-            <button class="appHeaderNav__item">Sign Up</button>
-            <div class="appHeaderNav__item appHeaderNav__logInBtn">
-                <button>Log In</button> 
-            </div>
-            <button class="appHeaderNav__item appHeaderNav__drawerOpenBtn" id="menu-button-js">
-                <span> <!-- empty when not signed in --> </span>
-            </button>  
-        </nav>
+    </div>
 
-        <div id="drawer-js" class="drawer">
-            <div class="drawer-overlay closeBtn-js"> </div>
-            <div class="drawer-sidebar"> 
+</header>
 
-                <button class="drawer__closeBtn closeBtn-js"></button>
-
-                <a class="drawer__profilePic" href="#">
-                    <span></span>
-
-                </a>
-
-                <hr class="drawer__divider">
-
-                <a class="drawer__icon" href="#"> 
-
-                    {% include "assets/home.svg" %}
-
-                    <span> Home </span>
-                </a>
-
-                <a class="drawer__icon" href="#"> 
-                      
-                    {% include "assets/pencil.svg" %}
-
-                    <span> Add Listing </span>
-                </a>
-
-                <a class="drawer__icon" href="#"> 
-                        
-                    {% include "assets/account.svg" %}
-
-                    <span> Sign Up </span>
-                </a>
-   
-                <a class="drawer__icon" href="#"> 
-                        
-                    {% include "assets/login.svg" %}
-
-                    <span> Sign In </span>
-                </a>
-                
-            </div>
-        </div>
-
-    </header>
-
-    <script>
-        window.onload = function() {
-            var menuButton = document.getElementById('menu-button-js');
-            var drawer = document.getElementById('drawer-js');
-            var closeBtns = [].slice.call(document.querySelectorAll('.closeBtn-js'));
-            menuButton.addEventListener('click', function() {
-                if (this.classList.contains('active')) {
-                    this.classList.remove('active');
-                    drawer.classList.remove('drawer--active');
-                } else {
-                    this.className += ' active';
-                    drawer.className += ' drawer--active';
-                }
+<script>
+    window.onload = function() {
+        var menuButton = document.getElementById('menu-button-js');
+        var drawer = document.getElementById('drawer-js');
+        var closeBtns = [].slice.call(document.querySelectorAll('.closeBtn-js'));
+        menuButton.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+                drawer.classList.remove('drawer--active');
+            } else {
+                this.className += ' active';
+                drawer.className += ' drawer--active';
+            }
+        })
+        closeBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                menuButton.classList.remove('active');
+                drawer.classList.remove('drawer--active');            
             })
-            closeBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    menuButton.classList.remove('active');
-                    drawer.classList.remove('drawer--active');            
-                })
-            })
-        }
-    </script>
-</body>
-</html>
+        })
+    }
+</script>
+

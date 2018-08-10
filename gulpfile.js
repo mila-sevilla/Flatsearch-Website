@@ -51,6 +51,18 @@ gulp.task('nunjucks', function () {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("src/**/*.scss")
+        .pipe(plumber({
+            // Notify on error
+            errorHandler: function (err) {
+                notify.onError({
+                    title: "Gulp Error",
+                    message: "Error: <%= error.message %>",
+                    sound: "Bottle",
+                    onLast: true
+                })(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions']

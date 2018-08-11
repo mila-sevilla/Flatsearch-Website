@@ -12,14 +12,29 @@
         </a>
     </div>
     
-    <nav class="appHeaderNav"> 
+    <nav class="appHeaderNav {% if user %}appHeaderNav--signedIn{% endif %}">
+
         <a href="#" class="appHeaderNav__item">Add Listing</a>
-        <button class="appHeaderNav__item">Sign Up</button>
-        <div class="appHeaderNav__item appHeaderNav__logInBtn">
-            <button>Log In</button> 
-        </div>
+
+        {% if user %}
+
+            <a href="#" class="appHeaderNav__item">Favorites</a>
+
+        {% else %}
+
+            <button class="appHeaderNav__item">Sign Up</button>
+            <div class="appHeaderNav__item appHeaderNav__logInBtn">
+                <button>Log In</button> 
+            </div>
+
+        {% endif %}
+        
         <button class="appHeaderNav__item appHeaderNav__drawerOpenBtn" id="menu-button-js">
-            <span> <!-- empty when not signed in --> </span>
+            <span> 
+                {% if user %}
+                    {% include "../Avatar/Avatar.html" %}
+                {% endif %}
+            </span>
         </button>  
     </nav>
 
@@ -30,8 +45,15 @@
             <button class="drawer__closeBtn closeBtn-js"></button>
 
             <a class="drawer__profilePic" href="#">
-                <span></span>
-
+                <span>
+                    {% include "../Avatar/Avatar.html" %}
+                </span>
+                <br>
+                {% if user %}
+                    {{user.displayName}}
+                {% else %}
+                    Some text
+                {% endif %}
             </a>
 
             <hr class="drawer__divider">
@@ -50,19 +72,62 @@
                 <span> Add Listing </span>
             </a>
 
-            <a class="drawer__icon" href="#"> 
+            {% if user %}
+
+                <a class="drawer__icon" href="#"> 
+                
+                    {% include "assets/heart.svg" %}
+    
+                    <span> Your Favorites </span>
+                </a>
+    
+                <a class="drawer__icon" href="#"> 
                     
-                {% include "assets/account.svg" %}
-
-                <span> Sign Up </span>
-            </a>
-
-            <a class="drawer__icon" href="#"> 
+                    {% include "assets/account.svg" %}
+    
+                    <span> Edit Profile </span>
+                </a>
+    
+                <a class="drawer__icon" href="#"> 
                     
-                {% include "assets/login.svg" %}
+                    {% include "assets/folder.svg" %}
+    
+                    <span> See Your Listings </span>
+                </a>
+    
+                <a class="drawer__icon" href="#"> 
+    
+                    {% include "assets/setting.svg" %}
+    
+                    <span> Account Settings </span>
+                </a>
+    
+                <hr class="drawer__divider">
+                
+                <a class="drawer__icon drawer__icon__signOut" href="#"> 
+    
+                    {% include "assets/signout.svg" %}
+    
+                    <span> Sign Out </span>
+                </a>
+    
+            {% else %}
 
-                <span> Sign In </span>
-            </a>
+                <a class="drawer__icon" href="#"> 
+                        
+                    {% include "assets/account.svg" %}
+
+                    <span> Sign Up </span>
+                </a>
+
+                <a class="drawer__icon" href="#"> 
+                        
+                    {% include "assets/login.svg" %}
+
+                    <span> Sign In </span>
+                </a>
+
+            {% endif %}
             
         </div>
     </div>

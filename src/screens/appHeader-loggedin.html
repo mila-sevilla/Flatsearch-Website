@@ -14,7 +14,12 @@
 </head>
 <body>
 
-    {% include "../components/AppHeader/AppHeader_loggedin.html" %}
+    {% set user = {
+        firstLetter: 'M',
+        displayName: 'Mila Sevilla Zhou'
+    } %}
+
+    {% include "../components/AppHeader/AppHeader.html" %}
 
 </body>
 </html>

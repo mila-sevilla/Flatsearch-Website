@@ -22,7 +22,7 @@ If you have added assets like images or scripts, which you then want to referenc
 
 ## Referencing images and scripts in Html
 
-If you need to reference a file from your html, fo example and image or a script, use the path relative to the domain root folder instead of the path relative to the html file from which you are trying to reference the file.
+If you need to reference a file from your html, fo example an image or a script, use the path relative to the domain root folder instead of the path relative to the html file from which you are trying to reference the file.
 
 For example, say you have a component named Header component in the following location:
 ```
@@ -36,6 +36,7 @@ use
 ```html
 <img src="/components/header/logo.jpg" alt="logo">
 ```
+notice the slash at the beginning. Without it, it will still be only relative the location of the html file, in which case it would try to look up a folder called 'components' on the same level as Header.html, but it would fail because such folde doesn't exist.
 
 ## Nunjucks templating cheatsheet
 
@@ -57,9 +58,9 @@ So for example
     <p>Hello {{userName}}</p>
 
 </div>
-
+```
 compiles to:
-
+```html
 <div>
     <p>Hello Mila</p>
 </div>
@@ -74,18 +75,22 @@ you can add logic by using if else statements
     {% endif %}
 </div>
 ```
-Then, provided you have set the user to true, it would compile to:
-```html
+Then, provided you have set the user to true:
+```
 {% set user = true %}
-
+```
+it would compile to:
+```html
 <div>
     <p>Hello user</div>
 </div>
 ```
-Or alternatively:
-```html
+Or alternatively, setting the user to false:
+```
 {% set user = false %}
-
+```
+will compile to
+```html
 <div>
     <p>Please log in</p>
 </div>
@@ -93,11 +98,11 @@ Or alternatively:
 
 ## SASS cheatsheet
 
-At any point, you can simply change the extension of your css file from .css to .scss and starting using scss (aka sass) features. Regular css works the same inside sass files, so it's opt-in (you can use, but don't have to).
+At any point, you can simply change the extension of your css file from .css to .scss and starting using scss (aka sass) features. Regular css works the same inside sass files, so it's opt-in (you can use it, but don't have to).
 
-Sass needs compiling! browser doesn't recognize it, so you need to be running the gulp task when working with .scss files. On the other hand, if you have a syntax error (missing semicolon for example), gulp will throw an error.
+Sass needs compiling! browser doesn't recognize it, so you need to be running the gulp task when working with .scss files. On the other hand, if you have a syntax error (missing semicolon for example), gulp will throw an error and thus effectively letting you know you have a problem in the code.
 
-Some sass feature include:
+Some sass features include:
 ### Nesting:
 ```scss
 .navigation {
@@ -144,7 +149,7 @@ $navHeight: 20px;
     height: $navHeight;
 
     > button {
-        margin: $navHeight - 10;
+        margin: $navHeight - 5;
     }
 }
 ```
@@ -154,6 +159,6 @@ will compile to:
     display: 20px;
 }
 .navigation > button {
-    margin: 10px;
+    margin: 15px;
 }
 ```

@@ -7,6 +7,7 @@
 
 .addListingChips > div {
     display: flex;
+    width: 305px;
 }
 
 .addListingChips input {
@@ -21,7 +22,7 @@
 }
 
 .addListingChips__option {
-    margin: 0 0 0 15px;
+    margin: 0 15px 0 0;
     display: flex;
 }
 
@@ -30,9 +31,8 @@
 }
 
 .addListingChips legend {
-    margin: 15px 0 15px 15px;
     width: 130px;
-    padding: 0;
+    margin: 15px 0;
     white-space: normal;
 }
 
@@ -54,39 +54,41 @@ input[type=checkbox]:checked + label {
 
 .formInput > div {
     padding-bottom: 40px;
+    width: 305px;
+    display: flex;
+    position: relative;
+    align-items: center;
 }
 
 .formInput__label {
-    margin: 9px 0 9px 15px;
-    color: #53504B;
     width: 130px;
+    height: 18px;
+    color: #53504B;
+    margin: 9px 0 15px 0;
 }
 
 .formInput__input {
-    margin: 0 10px 0 15px;
     width: 240px;
     height: 36px;
+    margin: 0 10px 0 0;
     border: 1px solid#726F68;
     border-radius: 3px;
 }
 
-.formInput > div > span {
-    margin-right: 15px;
-}
-
 .formInput__error {
     position: absolute;
-    margin: 10px 0 0 15px;
-    padding: 5px 0 0 35px;  
-    height: 24px;
+    bottom: 13px;
+    padding: 0 0 0 25px;  
     background-image: url('./assets/warning.svg');
     background-repeat: no-repeat; 
     color: #EB5757; 
+    font-weight: 300;
 }
 
 .formInput__input--textarea {
     height: 100px;
-    width: 290px;
+    width: 305px;
+    margin: 0;
 }
 
 

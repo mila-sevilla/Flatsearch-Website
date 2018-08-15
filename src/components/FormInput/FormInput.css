@@ -7,7 +7,8 @@
 
 .addListingChips > div {
     display: flex;
-    width: 305px;
+    width: 287px;
+    justify-content: space-between
 }
 
 .addListingChips input {
@@ -22,12 +23,7 @@
 }
 
 .addListingChips__option {
-    margin: 0 15px 0 0;
     display: flex;
-}
-
-.addListingChips__option__flat {
-    margin-right: 15px;
 }
 
 .addListingChips legend {
@@ -54,10 +50,11 @@ input[type=checkbox]:checked + label {
 
 .formInput > div {
     padding-bottom: 40px;
-    width: 305px;
+    width: 287px;
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: space-between;
 }
 
 .formInput__label {
@@ -87,7 +84,7 @@ input[type=checkbox]:checked + label {
 
 .formInput__input--textarea {
     height: 100px;
-    width: 305px;
+    width: 287px;
     margin: 0;
 }
 

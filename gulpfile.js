@@ -8,7 +8,7 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 
 // Static server
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['build'], function () {
     browserSync.init({
         server: {
             baseDir: "./docs"

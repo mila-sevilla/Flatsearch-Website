@@ -1,26 +1,24 @@
-.addListingChips {
-    display: flex;
-    align-items: center;
+.formInput {
     color: #53504B;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.addListingChips > div {
+.formInput > div {
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
-    width: 305px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .addListingChips input {
     -webkit-appearance: none;
     appearance: none;
 }
-
-/* even though the chips are different html elements from inputs below,
-   they can still share the same spacing strategy for outer spacing and its label.
-   '.addListingChips legend' and '.formInput__label' could share styles. I would personally
-   attach the class '.formInput__label' on the legend element as well instead of having
-   the styles seperately like this.
-*/
 
 .addListingChips__option label {
     border: 1px solid #726F68;
@@ -29,20 +27,20 @@
 }
 
 .addListingChips__option {
-    margin: 0 15px 0 0; /* equals to margin-right: 15px */
+    /* SOLVED - equals to margin-right: 15px */
     display: flex;
 }
 
-.addListingChips__option__flat {
-    margin-right: 15px; /* you have already set margin-right 15px in the block above
-                           so you probably don't need this */
+.addListingChips__option:first-child {
+    margin-right: 10px;
 }
 
-.addListingChips legend {
-    width: 130px;
-    margin: 15px 0;
-    white-space: normal;
-}
+/* SOLVED - even though the chips are different html elements from inputs below,
+   they can still share the same spacing strategy for outer spacing and its label.
+   '.addListingChips legend' and '.formInput__label' could share styles. I would personally
+   attach the class '.formInput__label' on the legend element as well instead of having
+   the styles seperately like this.
+*/
 
 .addListingChips__option input:focus + label { 
     border: 1px solid #FFAE00;
@@ -53,34 +51,21 @@ input[type=checkbox]:checked + label {
     border: 1px solid #FFAE00;
 } 
 
-.formInput {
-    display: flex;
-    color: #53504B;
-    flex-wrap: wrap;
-    flex-direction: row;
-}  
-
-.formInput > div {
-    padding-bottom: 40px;
-    width: 305px;
-    display: flex;
-    position: relative;
-    align-items: center;
-}
-
 .formInput__label {
-    width: 130px; /* if i put 'facebook profile' as a profile then 130px is not big enough */
-    height: 18px; /* i think seeting it to the height the same as input makes more sense
+    width: 150px; /* SOLVED  - if i put 'facebook profile' as a profile then 130px is not big enough */
+    height: 36px;
+    line-height: 36px; /* SOLVED - i think seeting it to the height the same as input makes more sense
                      then you can also remove the margin, if you need to center text vertically,
                      you can set line-height to the same number (e.g. line-height: 36px;) */
-    color: #53504B; /* what about taking advange of cascading? fun fact: css = cascading style sheets */
-    margin: 9px 0 15px 0;
+     /* SOLVED - what about taking advange of cascading? fun fact: css = cascading style sheets */
 }
 
 .formInput__input {
-    width: 240px; /* will this width not be too narrow for fields like flat title or facebook profile? */
+ /* will this width not be too narrow for fields like flat title or facebook profile? */
     height: 36px;
-    margin: 0 10px 0 0; /* this equals margin-right: 10px */
+    width: 100%;
+    max-width: 180px;
+    margin-right: 10px; 
     border: 1px solid#726F68;
     border-radius: 3px;
 }
@@ -88,7 +73,7 @@ input[type=checkbox]:checked + label {
 .formInput__error { /* seems to be working fine in IE if you add 'bottom' and 'left' property */
     position: absolute;
     bottom: 13px;
-    padding: 0 0 0 25px;  /* this equals padding-left: 25px */
+    padding-left: 25px;  
     background-image: url('./assets/warning.svg');
     background-repeat: no-repeat; 
     color: #EB5757; 
@@ -102,11 +87,15 @@ input[type=checkbox]:checked + label {
 
 .formInput__input--textarea {
     height: 100px;
-    width: 305px; /* again, this seems to be very narrow for a textfield */
-    margin: 0;
+    margin-right: 0;
+    max-width: 500px;
+ /* again, this seems to be very narrow for a textfield */
     /* just reminding you this will be <textarea> html element. */
 }
 
+.formInput--textarea > div {
+    max-width: 500px;
+}
 
 
 /* Desktop Media Query */

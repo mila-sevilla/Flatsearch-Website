@@ -6,11 +6,10 @@
 }
 
 .formInput > div {
-    padding-bottom: 40px;
     width: 100%;
     max-width: 500px;
     display: flex;
-    position: relative;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
 }
@@ -64,9 +63,7 @@ input[type=checkbox]:checked + label {
     margin-right: 0;
 }
 
-.formInput__error { /* seems to be working fine in IE if you add 'bottom' and 'left' property */
-    position: absolute;
-    bottom: 13px;
+.formInput__error > small { /* seems to be working fine in IE if you add 'bottom' and 'left' property */
     padding-left: 25px;  
     background-image: url('./assets/warning.svg');
     background-repeat: no-repeat; 
@@ -77,6 +74,10 @@ input[type=checkbox]:checked + label {
            is long and must break over two lines on a narrow screen? 
         2) Also, if the text is over broken over two lines, is the first word on the second line
            aligned to the left border of the warning icon or to the first word of the first line? */
+}
+
+.formInput__error {
+    width: 100%;
 }
 
 .formInput__input--textarea {

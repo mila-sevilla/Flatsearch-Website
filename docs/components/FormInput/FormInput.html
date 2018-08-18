@@ -32,11 +32,19 @@
         </div>
     </fieldset>
 
-    <div class="formInput formInput--textSmall">
+    <div class="formInput formInput--text">
         <label class="formInput__label" for="rent">Rent</label>
         <div>
-            <input class="formInput__input" type="text" name="rent"></input>
+            <input class="formInput__input" type="text" name="rent">
             <span class="formInput__suffix">CZK</span>
+            <small class="formInput__error">This field is required</small>
+        </div>
+    </div>
+
+    <div class="formInput formInput--text">
+        <label class="formInput__label" for="Title">Title</label>
+        <div>
+            <input class="formInput__input formInput__input--large" type="text" name="title">
             <small class="formInput__error">This field is required</small>
         </div>
     </div>
@@ -44,10 +52,10 @@
     <div class="formInput formInput--textarea">
         <label class="formInput__label" for="City">Description</label>
         <div>
-            <input class="formInput__input formInput__input--textarea" type="textarea" name="description" 
+            <textarea class="formInput__input formInput__input--textarea" type="textarea" name="description" 
                 placeholder="Please enter a description of the flat/ room here"
                 maxlength="5000">
-            </input>
+            </textarea>
             <small class="formInput__error">This field is required</small>
         </div>
     </div>
@@ -55,10 +63,10 @@
     
     <div class="formInput formInput--checkbox">
         <div>
-            <input class="formInput__input formInput__input--checkbox" type="checkbox" name="city"></input>
+            <input class="formInput__input formInput__input--checkbox" type="checkbox" name="city">
             <label class="formInput__label" for="City">check this out.</label>
         </div>
-        <small="formInput__error">Must be checked</small>
+        <small class="formInput__error">Must be checked</small>
     </div>
 
 </body>

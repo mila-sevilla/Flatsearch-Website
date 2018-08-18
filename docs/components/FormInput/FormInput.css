@@ -40,7 +40,6 @@
 }
 
 .addListingChips__option {
-    /* SOLVED - equals to margin-right: 15px */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -49,13 +48,6 @@
 .addListingChips__option:first-child {
     margin-right: 10px;
 }
-
-/* SOLVED - even though the chips are different html elements from inputs below,
-   they can still share the same spacing strategy for outer spacing and its label.
-   '.addListingChips legend' and '.formInput__label' could share styles. I would personally
-   attach the class '.formInput__label' on the legend element as well instead of having
-   the styles seperately like this.
-*/
 
 .addListingChips__option input:focus + label { 
     border: 1px solid #FFAE00;
@@ -68,22 +60,23 @@ input[type=checkbox]:checked + label {
 } 
 
 .formInput__label {
-    width: 150px; /* SOLVED  - if i put 'facebook profile' as a profile then 130px is not big enough */
+    width: 150px; 
     height: 36px;
-    line-height: 36px; /* SOLVED - i think seeting it to the height the same as input makes more sense
-                     then you can also remove the margin, if you need to center text vertically,
-                     you can set line-height to the same number (e.g. line-height: 36px;) */
-     /* SOLVED - what about taking advange of cascading? fun fact: css = cascading style sheets */
+    line-height: 36px; 
 }
 
 .formInput__input {
- /* will this width not be too narrow for fields like flat title or facebook profile? */
     height: 36px;
     width: 100%;
     max-width: 180px;
     margin-right: 10px; 
     border: 1px solid#726F68;
     border-radius: 3px;
+}
+
+.formInput__input--large {
+    max-width: 500px;
+    margin-right: 0;
 }
 
 .formInput__error { /* seems to be working fine in IE if you add 'bottom' and 'left' property */
@@ -105,15 +98,8 @@ input[type=checkbox]:checked + label {
     height: 100px;
     margin-right: 0;
     max-width: 500px;
- /* again, this seems to be very narrow for a textfield */
-    /* just reminding you this will be <textarea> html element. */
 }
 
 .formInput--textarea > div {
     max-width: 500px;
 }
-
-
-/* Desktop Media Query */
-
-/*  @media screen and (min-width: 443px) */

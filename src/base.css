@@ -39,3 +39,7 @@ button:focus:hover {
 button:active {
     outline: none !important;
 }
+
+input[type=checkbox] {
+  visibility: hidden;
+}

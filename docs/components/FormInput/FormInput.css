@@ -43,6 +43,10 @@
     padding: 10px;
 }
 
+.addListingChips {
+    margin-bottom: 35px;
+}
+
 .addListingChips input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -80,21 +84,24 @@ input[type=checkbox]:checked + label {
     margin-right: 0;
 }
 
-.formInput__error > small { /* seems to be working fine in IE if you add 'bottom' and 'left' property */
+.formInput__error > small { 
     padding-left: 25px;  
     background-image: url('./assets/warning.svg');
     background-repeat: no-repeat; 
     color: #EB5757; 
     font-weight: 300;
-    /* to think about: 
-        1) with position absolute, what will happen if the error message 
-           is long and must break over two lines on a narrow screen? 
-        2) Also, if the text is over broken over two lines, is the first word on the second line
-           aligned to the left border of the warning icon or to the first word of the first line? */
 }
 
 .formInput__error {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
+    max-width: 500px;
+    min-height: 35px;
 }
 
 .formInput__input--textarea {

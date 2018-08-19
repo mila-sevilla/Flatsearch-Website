@@ -56,12 +56,8 @@
 
 .addListingChips__option input:focus + label { 
     border: 1px solid #FFAE00;
-    box-shadow: inset 0 0 0 0.5px #FFAE00; 
+    box-shadow: inset 0 0 0 1px #FFAE00; 
 }
-
-.addListingChips__option input[type=checkbox]:checked + label {
-    border: 1px solid #FFAE00;
-} 
 
 .formInput__input--large {
     max-width: 500px;
@@ -162,6 +158,8 @@
     height: 36px;
     line-height: 36px;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     padding: 0 10px;
     background-color: white;
     color: #53504B;

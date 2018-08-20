@@ -27,9 +27,6 @@ button {
   border: none;
 }
 
-label:hover {
-  cursor: pointer; 
-}
 button:focus {
     outline: 5px auto -webkit-focus-ring-color;
 }

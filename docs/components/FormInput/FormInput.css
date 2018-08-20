@@ -66,6 +66,10 @@
     display: flex;
 }
 
+.addListingChips__option label:hover {
+    cursor: pointer; 
+}
+
 .addListingChips__option:first-child {
     margin-right: 10px;
 }
@@ -167,6 +171,10 @@
 
 .formInput--checkbox__label {
     padding-left: 35px;
+}
+
+.formInput--checkbox__label:hover {
+    cursor: pointer; 
 }
 
 .formInput > .formInput--dropdown {

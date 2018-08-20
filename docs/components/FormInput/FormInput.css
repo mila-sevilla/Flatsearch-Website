@@ -199,7 +199,7 @@
     border:1px solid rgb(166, 166, 166);
     background-image: url('./assets/arrow-down.svg');
     background-repeat: no-repeat; 
-    background-position: 0;
+    background-position: right 10px bottom 14px;
 }
 
 .formInput--dropdown--multiple {

@@ -43,3 +43,7 @@ button:active {
 input[type=checkbox] {
   visibility: hidden;
 }
+
+select:hover {
+  cursor: pointer; 
+}

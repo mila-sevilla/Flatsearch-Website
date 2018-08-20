@@ -13,10 +13,6 @@
     justify-content: flex-start;
 }
 
-.addListingChips--extended {
-    margin-bottom: 0;
-}
-
 .addListingChips__options--extended > div {
     max-width: 500px;
     display: flex;
@@ -170,7 +166,7 @@
     font-size: 14px;
     font-weight: 300;
     width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .formInput--dropdown > label {

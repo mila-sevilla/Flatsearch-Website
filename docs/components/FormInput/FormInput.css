@@ -5,10 +5,6 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
 }
 
 .formInput > div {
@@ -25,6 +21,29 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+}
+
+.addListingChips--extended {
+    margin-bottom: 0;
+}
+
+.addListingChips__options--extended > div {
+    max-width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.addListingChips__options--extended > div > .addListingChips__option {
+    padding-bottom: 15px;
 }
 
 .formInput__label {
@@ -187,7 +206,8 @@
             align-items: flex-start;
     font-size: 14px;
     font-weight: 300;
-    width: 170px;
+    width: 150px;
+    margin-bottom: 10px;
 }
 
 .formInput--dropdown > label {
@@ -208,10 +228,6 @@
     background-image: url('./assets/arrow-down.svg');
     background-repeat: no-repeat; 
     background-position: right 10px bottom 14px;
-}
-
-.formInput--dropdown--multiple {
-    padding: 0 0 35px 150px;
 }
 
 .formInput--dropdown--multiple > div:first-child {

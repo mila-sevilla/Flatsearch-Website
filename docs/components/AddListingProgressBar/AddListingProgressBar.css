@@ -14,6 +14,8 @@
     width: 90%;
     max-width: 840px;
     height: 10px;
+    border: 0px;
+    border-radius: 10px;
     -webkit-appearance: none;
 }
 
@@ -26,12 +28,13 @@
     margin-bottom: 5px;
 }
 
-.addListingProgressBar label:hover {
-    cursor: default;
-}
-
 progress[value]::-webkit-progress-bar {
     background-color: #D6DCDA;
+    border-radius: 10px;
+}
+
+progress[value]::-moz-progress-bar {
+    background-color: #249974;
     border-radius: 10px;
 }
 

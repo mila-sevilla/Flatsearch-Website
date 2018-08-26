@@ -226,6 +226,11 @@
     background-position: right 10px bottom 14px;
 }
 
+.formInput--dropdown > select:focus {
+    border: 1px solid #FFAE00;
+    outline: none;
+}
+
 .formInput--dropdown--multiple > div:first-child {
     margin-right: 10px;
     width: 170px;

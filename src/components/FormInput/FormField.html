@@ -124,14 +124,19 @@
             to the website</label>
     </div>
 
-    <div class="formField formField--text">
-        <label class="formField__label" for="Title">Title</label>
-        <div>
-            <input class="formField__input formField__input--large" type="text" name="title">
-            <div class="formField__error">
-                <small>This field is required</small>
+    <fieldset class="formField formField--filters">
+        <legend class="formField__label" for="Type">Type</legend>
+
+        <div class="formField--filters__flatType"> 
+            <div class="addListingChips__option">
+                    <input type="radio" name="flatType" id="roomFilter" value="1" checked="checked" />
+                    <label for="roomFilter"> Room (shared flat) </label>
+            </div>
+
+            <div class="addListingChips__option addListingChips__option__flat">
+                <input type="radio" name="flatTypeFilter" id="flatFilter" value="1" />
+                <label for="flatFilter"> Entire Flat </label>
             </div>
         </div>
-    </div>
 
 </body>

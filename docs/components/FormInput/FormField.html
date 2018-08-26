@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../../base.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="FormInput.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="FormField.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 </head>
 
@@ -16,8 +16,8 @@
     <br> <br>
 
     <fieldset>
-        <div class="formInput addListingChips">
-            <legend class="formInput__label" for="Type">Type</legend>
+        <div class="formField addListingChips">
+            <legend class="formField__label" for="Type">Type</legend>
             <div>
                 <!-- styles on div -->
                 <div class="addListingChips__option">
@@ -34,8 +34,8 @@
     </fieldset>
 
     <fieldset>
-        <div class="formInput addListingChips">
-            <legend class="formInput__label" for="Type">Type</legend>
+        <div class="formField addListingChips">
+            <legend class="formField__label" for="Type">Type</legend>
 
             <div class="addListingChips__options--extended"> 
                 <div> 
@@ -50,9 +50,9 @@
                     </div>
                 </div>
 
-                <div class="formInput formInput--dropdown--multiple">
+                <div class="formField formField--dropdown--multiple">
 
-                    <div class="formInput--dropdown">
+                    <div class="formField--dropdown">
                         <label for="flatmates">Number of Flatmates</label>
                         <select name="dropdown--menu">
                             <option value="1" selected>1</option>
@@ -63,7 +63,7 @@
                         </select>
                     </div>
             
-                    <div class="formInput--dropdown">
+                    <div class="formField--dropdown">
                         <label for="flatSize">How Big Is the Flat?</label>
                         <select name="dropdown--menu">
                             <option value="1+kk" selected>1+kk</option>
@@ -85,43 +85,58 @@
 
 
 
-    <div class="formInput formInput--text">
-        <label class="formInput__label" for="rent">Rent</label>
+    <div class="formField formField--text">
+        <label class="formField__label" for="rent">Rent</label>
         <div>
-            <input class="formInput__input" type="text" name="rent">
-            <span class="formInput__suffix">CZK</span>
-            <div class="formInput__error">
+            <input class="formField__input" type="text" name="rent">
+            <span class="formField__suffix">CZK</span>
+            <div class="formField__error">
                 <small>This field is required</small>
             </div>
         </div>
     </div>
 
-    <div class="formInput formInput--text">
-        <label class="formInput__label" for="Title">Title</label>
+    <div class="formField formField--text">
+        <label class="formField__label" for="Title">Title</label>
         <div>
-            <input class="formInput__input formInput__input--large" type="text" name="title">
-            <div class="formInput__error">
+            <input class="formField__input formField__input--large" type="text" name="title">
+            <div class="formField__error">
                 <small>This field is required</small>
             </div>
         </div>
     </div>
 
-    <div class="formInput formInput--textarea">
-        <label class="formInput__label" for="City">Description</label>
+    <div class="formField formField--textarea">
+        <label class="formField__label" for="City">Description</label>
         <div>
-            <textarea class="formInput__input formInput__input--textarea" name="description" placeholder="Please enter a description of the flat/ room here"
+            <textarea class="formField__input formField__input--textarea" name="description" placeholder="Please enter a description of the flat/ room here"
                 maxlength="5000"></textarea>
-            <div class="formInput__error">
+            <div class="formField__error">
                 <small>This field is required</small>
             </div>
         </div>
     </div>
 
-    <div class="formInput formInput--checkbox">
-        <input class="formInput__input--checkbox" type="checkbox" name="subscribe" id="subscribe" value="newsletter">
-        <label class="formInput--checkbox__tick" for="subscribe"></label>
-        <label class="formInput--checkbox__label" for="subscribe">Yes, I want to receive e-mails about all important updates
+    <div class="formField formField--checkbox">
+        <input class="formField__input--checkbox" type="checkbox" name="subscribe" id="subscribe" value="newsletter">
+        <label class="formField--checkbox__tick" for="subscribe"></label>
+        <label class="formField--checkbox__label" for="subscribe">Yes, I want to receive e-mails about all important updates
             to the website</label>
     </div>
+
+    <fieldset class="formField formField--filters">
+        <legend class="formField__label" for="Type">Type</legend>
+
+        <div class="formField--filters__flatType"> 
+            <div class="addListingChips__option">
+                    <input type="radio" name="flatType" id="roomFilter" value="1" checked="checked" />
+                    <label for="roomFilter"> Room (shared flat) </label>
+            </div>
+
+            <div class="addListingChips__option addListingChips__option__flat">
+                <input type="radio" name="flatTypeFilter" id="flatFilter" value="1" />
+                <label for="flatFilter"> Entire Flat </label>
+            </div>
+        </div>
 
 </body>

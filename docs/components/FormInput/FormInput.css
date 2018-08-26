@@ -89,7 +89,7 @@
     margin-right: 10px;
 }
 
-.addListingChips__option input:focus + label { 
+.addListingChips__option input:checked + label { 
     border: 1px solid #FFAE00;
     -webkit-box-shadow: inset 0 0 0 1px #FFAE00;
             box-shadow: inset 0 0 0 1px #FFAE00; 

@@ -16,13 +16,28 @@ Gulp command will copy the files from the src folder to the docs folder. It will
 ```
 localhost:3000
 ```
-The process will continue running in the background until you shut it down by pressing **ctrl+C**.
+The process will continue running in the background until you shut it down by pressing `ctrl+C`.
 
 When running, it watches for changes on css and html files. If you change any of those files, it will do the processing (for example prefixing css) and output the file to the docs folder. Changes on the files also trigger auto reload of the browser.
 
 If you have added assets like images or scripts, which you then want to reference in your css or html, be sure to restart the gulp task, as those need to be also copied to docs folder (which happens on the start of the task).
 
-## Deploying and pusblishing to Github Pages
+## React Storybook
+
+You can import your react components to storybook inside `src/stories.js`
+
+to run storybook dev server:
+```
+npm run storybook
+```
+this will start a dev server on the port `9001`
+
+The deploy command below includes outputting the storybook as a static page which is then published to Github pages and available at
+
+https://mila-sevilla.github.io/flat-search/storybook/
+
+
+## Deploying and publishing to Github Pages
 
 to publish the page on Github pages, run:
 ```

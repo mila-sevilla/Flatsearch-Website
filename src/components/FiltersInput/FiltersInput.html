@@ -12,12 +12,52 @@
 </head>
 
 <body>
- 
-<div class="filtersInput">
-    <div class="filters_slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+    <div class="filtersInput">
+
+        <fieldset>
+            <div class="formField addListingChips">
+                <legend class="formField__label" for="Type">Type</legend>
+                <div>
+                    <!-- styles on div -->
+                    <div class="addListingChips__option">
+                        <input type="radio" name="addListingChips" id="option1" value="1" checked="checked" />
+                        <label for="option1"> Room (shared flat) </label>
+                    </div>
+
+                    <div class="addListingChips__option addListingChips__option__flat">
+                        <input type="radio" name="addListingChips" id="option2" value="2" />
+                        <label for="option2"> Entire Flat </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="formField formField--text">
+            <label class="formField__label" for="rent">Rent</label>
+            <div>
+                <input class="formField__input formField__input--suffix" type="number" name="rent">
+                <span class="formField__suffix">CZK</span>
+            </div>
+        </div>
+
+        <div class="filters_slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
     </div>
-</div>
+
+    <div class="formField--dropdown">
+        <label for="flatmates">District</label>
+        <select name="dropdown--menu">
+            <option value="">All Districts</option>
+            <option value="1">Prag 1</option>
+            <option value="2">Prag 2</option>
+            <option value="3">Prag 3</option>
+            <option value="4">Prag 4</option>
+            <option value="5">Prag 5</option>
+        </select>
+    </div>
 
 </body>
+
 </html>

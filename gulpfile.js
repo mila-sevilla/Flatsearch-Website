@@ -11,13 +11,13 @@ const autoprefixer = require('gulp-autoprefixer');
 gulp.task('serve', ['build'], function () {
     browserSync.init({
         server: {
-            baseDir: "./docs"
+            baseDir: "./dist"
         }
     });
     gulp.watch("./src/**/*.{html,njk}", ['nunjucks']);
     gulp.watch("./src/**/*.css", ['autoprefixer']);
     gulp.watch("./src/**/*.scss", ['sass']);
-    gulp.watch("./docs/**/*.{html,css}").on('change', browserSync.reload);
+    gulp.watch("./dist/**/*.{html,css}").on('change', browserSync.reload);
 });
 
 gulp.task('autoprefixer', function () {
@@ -25,7 +25,7 @@ gulp.task('autoprefixer', function () {
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(gulp.dest('docs'))
+        .pipe(gulp.dest('dist'))
 })
 
 gulp.task('nunjucks', function () {
@@ -45,7 +45,7 @@ gulp.task('nunjucks', function () {
         .pipe(nunjucksRender({
             path: glob.sync('src/**/*/') // String or Array
         }))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('dist'));
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -67,13 +67,13 @@ gulp.task('sass', function() {
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(gulp.dest("docs"))
+        .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('copy', function () {
-    return gulp.src('./src/**/*.{svg,png,jpg,jpeg,gif,json,js}')
-        .pipe(gulp.dest('docs'))
+    return gulp.src(['./src/**/*.*','!./src/**/*.{html,njk,css,scss}'])
+        .pipe(gulp.dest('dist'))
 })
 
 gulp.task('default', ['serve']);

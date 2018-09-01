@@ -1,0 +1,57 @@
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+
+body {
+    font-family: Montserrat; 
+    font-size: 16px;
+    background-color: #FCFCFC;
+    padding: 0;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+button:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+button:focus:hover {
+    outline: none !important;
+}
+
+button:active {
+    outline: none !important;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+input[type=text]:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border: 1px solid #FFAE00;
+  -webkit-box-shadow: 0 0 3px #FFAE00;
+          box-shadow: 0 0 3px #FFAE00;
+}
+ 
+select:hover {
+  cursor: pointer; 
+}

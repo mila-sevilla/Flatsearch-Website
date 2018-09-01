@@ -85,6 +85,13 @@
     box-shadow: inset 0 0 0 1px #FFAE00; 
 }
 
+input[type=radio]:focus + label,
+input[type=checkbox]:focus + label {
+    outline: none !important;
+    border: 1px solid #FFAE00;
+    box-shadow: 0 0 3px #FFAE00;
+}
+
 .formField__input--large {
     max-width: 500px;
     margin-right: 0;
@@ -131,7 +138,7 @@
 }
 
 .formField__input--checkbox {
-    appearance: none;
+    opacity: 0;
 }
 
 .formField--checkbox__tick {

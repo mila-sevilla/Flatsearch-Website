@@ -38,10 +38,11 @@ button:active {
 }
 
 input[type=checkbox] {
-  visibility: hidden;
+  opacity: 0;
 }
 
 input[type=text]:focus,
+input[type=number]:focus,
 textarea:focus,
 select:focus {
   outline: none !important;

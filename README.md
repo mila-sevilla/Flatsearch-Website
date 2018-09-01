@@ -7,7 +7,7 @@ npm install
 ```
 To start the development server:
 ```
-gulp
+npm start
 ```
 
 Gulp command will copy the files from the src folder to the docs folder. It will start a development server on the following url
@@ -19,6 +19,13 @@ The process will continue running in the background until you shut it down by pr
 When running, it watches for changes on css and html files. If you change any of those files, it will do the processing (for example prefixing css) and output the file to the docs folder. Changes on the files also trigger auto reload of the browser.
 
 If you have added assets like images or scripts, which you then want to reference in your css or html, be sure to restart the gulp task, as those need to be also copied to docs folder (which happens on the start of the task).
+
+## Deploying and pusblishing to Github Pages
+
+to publish the page on Github pages, run:
+```
+npm run deploy
+```
 
 ## Referencing images and scripts in Html
 

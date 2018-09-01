@@ -5,6 +5,8 @@ To install the project, run the following command in the terminal.
 ```
 npm install
 ```
+
+## Development
 To start the development server:
 ```
 npm start

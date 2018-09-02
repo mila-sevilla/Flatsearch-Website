@@ -21,7 +21,7 @@
                 <div>
                     <!-- styles on div -->
                     <div class="addListingChips__option">
-                        <input type="radio" name="addListingChips" id="option1" value="1" checked="checked" />
+                        <input type="radio" name="addListingChips" id="option1" value="1"/>
                         <label for="option1"> Room (shared flat) </label>
                     </div>
 
@@ -33,21 +33,14 @@
             </div>
         </fieldset>
 
-        <div class="formField formField--text">
+        <div class="formField filters_slidecontainer">
             <label class="formField__label" for="rent">Rent</label>
-            <div>
-                <input class="formField__input formField__input--suffix" type="number" name="rent">
-                <span class="formField__suffix">CZK</span>
-            </div>
-        </div>
-
-        <div class="filters_slidecontainer">
             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
     </div>
 
     <div class="formField--dropdown">
-        <label for="flatmates">District</label>
+        <label class="formField__label" for="district">District</label>
         <select name="dropdown--menu">
             <option value="">All Districts</option>
             <option value="1">Prag 1</option>

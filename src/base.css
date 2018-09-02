@@ -43,13 +43,52 @@ input[type=checkbox] {
 
 input[type=text]:focus,
 input[type=number]:focus,
+input[type=range]:focus,
 textarea:focus,
 select:focus {
   outline: none !important;
   border: 1px solid #FFAE00;
   box-shadow: 0 0 5px #FFAE00;
 }
+
+input[type=radio]:focus + label,
+input[type=checkbox]:focus + label {
+  outline: none !important;
+  border: 1px solid #FFAE00;
+  box-shadow: 0 0 3px 1px #FFAE00;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  box-shadow: 0 0 3px 1px #FFAE00;
+}
+
+input[type=range]:focus {
+  border: none;
+  box-shadow: none;
+}
  
 select:hover {
   cursor: pointer; 
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
 }

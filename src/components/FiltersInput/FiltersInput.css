@@ -1,0 +1,108 @@
+.formField {
+    color: #53504B;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formField > div {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.formField__label {
+    width: 150px; 
+    height: 40px;
+    line-height: 40px; 
+}
+
+.addListingChips {
+    margin-bottom: 20px;
+}
+
+.addListingChips input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.addListingChips__option label {
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 3px;
+    padding: 10px 10px;
+    background-color: white;
+}
+
+.addListingChips__option {
+    display: flex;
+}
+
+.addListingChips__option label:hover {
+    cursor: pointer; 
+}
+
+.addListingChips__option:first-child {
+    margin-right: 10px;
+}
+
+.addListingChips__option input:checked + label {
+    border: 1px solid #249974;
+    color: white;
+    background-color: #249974;
+}
+
+.filters_slidecontainer {
+    margin-bottom: 20px;
+}
+
+.formField input[type=range] {
+    max-width: 500px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #FFAE00;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    margin-top: -14px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    max-width: 500px;
+    height: 6px;
+    cursor: pointer;
+    background: #D6DCDA;
+    border-radius: 3px;
+    border: 0.2px solid #010101;
+}
+
+.formField--dropdown {
+    display: flex;
+}
+
+.formField--dropdown > select {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 10px;
+    background-color: white;
+    color: #53504B;
+    border:1px solid rgb(166, 166, 166);
+    border-radius: 3px;
+    background-image: url('./assets/arrow-down.svg');
+    background-repeat: no-repeat; 
+    background-position: right 10px bottom 14px;
+}
+
+.formField--dropdown > select:focus {
+    border: 1px solid #FFAE00;
+    outline: none;
+}

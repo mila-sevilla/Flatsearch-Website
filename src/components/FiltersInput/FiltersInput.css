@@ -1,3 +1,9 @@
+.filtersInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .formField {
     color: #53504B;
     display: flex;
@@ -71,6 +77,27 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
     margin-top: -14px;
 }
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    border: 1px solid #FFAE00;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    margin-top: -14px;
+}
+  
+  /* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    border: 1px solid #FFAE00;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    margin-top: -14px;
+}
 
 input[type=range]::-webkit-slider-runnable-track {
     max-width: 500px;
@@ -78,14 +105,31 @@ input[type=range]::-webkit-slider-runnable-track {
     cursor: pointer;
     background: #D6DCDA;
     border-radius: 3px;
-    border: 0.2px solid #010101;
 }
+
+input[type=range]::-moz-range-track {
+    max-width: 500px;
+    height: 6px;
+    cursor: pointer;
+    background: #D6DCDA;
+    border-radius: 3px;
+}
+  
+  input[type=range]::-ms-track {
+    max-width: 500px;
+    height: 6px;
+    cursor: pointer;
+    background: #D6DCDA;
+    border-radius: 3px;    
+    border-color: transparent;
+    color: transparent;
+  }
 
 .formField--dropdown {
     display: flex;
 }
 
-.formField--dropdown > select {
+.formField--dropdown > div > select {
     width: 150px;
     height: 40px;
     line-height: 40px;
@@ -106,3 +150,23 @@ input[type=range]::-webkit-slider-runnable-track {
     border: 1px solid #FFAE00;
     outline: none;
 }
+
+.filtersInput__apply {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.filtersInput__apply > div {
+    display: flex;
+    background-color: #C08404;
+    color: white;
+    height: 55px;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtersInput__apply > div:hover {
+    cursor: pointer;
+} 

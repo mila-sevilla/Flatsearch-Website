@@ -21,7 +21,7 @@
                 <div>
                     <!-- styles on div -->
                     <div class="addListingChips__option">
-                        <input type="radio" name="addListingChips" id="option1" value="1"/>
+                        <input type="radio" name="addListingChips" id="option1" value="1" />
                         <label for="option1"> Room (shared flat) </label>
                     </div>
 
@@ -37,18 +37,28 @@
             <label class="formField__label" for="rent">Rent</label>
             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
-    </div>
 
-    <div class="formField--dropdown">
-        <label class="formField__label" for="district">District</label>
-        <select name="dropdown--menu">
-            <option value="">All Districts</option>
-            <option value="1">Prag 1</option>
-            <option value="2">Prag 2</option>
-            <option value="3">Prag 3</option>
-            <option value="4">Prag 4</option>
-            <option value="5">Prag 5</option>
-        </select>
+
+        <div class="formField formField--dropdown">
+            <label class="formField__label" for="district">District</label>
+            <div>
+                <select name="dropdown--menu">
+                    <option value="">All Districts</option>
+                    <option value="1">Prag 1</option>
+                    <option value="2">Prag 2</option>
+                    <option value="3">Prag 3</option>
+                    <option value="4">Prag 4</option>
+                    <option value="5">Prag 5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filtersInput__apply">
+            <div> <!-- styles on div -->
+                Apply Filters
+            </div>
+        </div>
+
     </div>
 
 </body>

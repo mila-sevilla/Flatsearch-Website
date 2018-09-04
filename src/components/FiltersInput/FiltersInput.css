@@ -11,12 +11,13 @@
 
 .filtersInput__cancelReset > button {
     width: 100%;
-    height: 46px;
+    height: 48px;
+    padding: 0;
     border: 1px solid #D7D3CE;
     font-weight: 300;
     background-repeat: no-repeat;
     background-color: white;
-    background-position: 25px 15px;
+    background-position: 25px 17px;
 }
 
 .filtersInput__cancel {
@@ -96,7 +97,7 @@
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: 1px solid #FFAE00;
+    border: 1px solid #249974;
     height: 32px;
     width: 32px;
     border-radius: 100px;
@@ -106,7 +107,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
-    border: 1px solid #FFAE00;
+    border: 1px solid #249974;
     height: 32px;
     width: 32px;
     border-radius: 100px;
@@ -117,7 +118,7 @@ input[type=range]::-moz-range-thumb {
   
   /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
-    border: 1px solid #FFAE00;
+    border: 1px solid #249974;
     height: 32px;
     width: 32px;
     border-radius: 100px;
@@ -181,6 +182,10 @@ input[type=range]::-moz-range-track {
 .filtersInput__apply {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 1rem;
     margin-top: 20px;
 }
 

@@ -45,10 +45,11 @@ input[type=text]:focus,
 input[type=number]:focus,
 input[type=range]:focus,
 textarea:focus,
-select:focus {
+select:focus,
+button:focus {
   outline: none !important;
   border: 1px solid #FFAE00;
-  box-shadow: 0 0 5px #FFAE00;
+  box-shadow: 0 0 3px 1px #FFAE00;
 }
 
 input[type=radio]:focus + label,

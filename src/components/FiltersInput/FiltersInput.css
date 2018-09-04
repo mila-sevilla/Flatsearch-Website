@@ -4,6 +4,33 @@
     justify-content: center;
 }
 
+.filtersInput__cancelReset {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.filtersInput__cancelReset > button {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #D7D3CE;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 25px 15px;
+}
+
+.filtersInput__cancel {
+    background-image: url("./assets/close.svg");
+}
+
+.filtersInput__reset {
+    background-image: url("./assets/reset.svg");
+}
+
+.filtersInput__cancel:focus {
+    border: 1px solid #FFAE00;
+}
+
 .formField {
     color: #53504B;
     display: flex;
@@ -12,7 +39,7 @@
 
 .formField > div {
     width: 100%;
-    max-width: 500px;
+    max-width: 320px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -21,8 +48,8 @@
 
 .formField__label {
     width: 150px; 
-    height: 40px;
-    line-height: 40px; 
+    height: 44px;
+    line-height: 44px; 
 }
 
 .addListingChips {
@@ -37,7 +64,7 @@
 .addListingChips__option label {
     border: 1px solid rgb(166, 166, 166);
     border-radius: 3px;
-    padding: 10px 10px;
+    padding: 13px 10px;
     background-color: white;
 }
 
@@ -64,14 +91,14 @@
 }
 
 .formField input[type=range] {
-    max-width: 500px;
+    max-width: 320px;
 }
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: 1px solid #FFAE00;
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
     border-radius: 100px;
     background: white;
     cursor: pointer;
@@ -80,8 +107,8 @@ input[type=range]::-webkit-slider-thumb {
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
     border: 1px solid #FFAE00;
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
     border-radius: 100px;
     background: white;
     cursor: pointer;
@@ -91,8 +118,8 @@ input[type=range]::-moz-range-thumb {
   /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
     border: 1px solid #FFAE00;
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
     border-radius: 100px;
     background: white;
     cursor: pointer;
@@ -100,7 +127,7 @@ input[type=range]::-ms-thumb {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    max-width: 500px;
+    max-width: 320px;
     height: 6px;
     cursor: pointer;
     background: #D6DCDA;
@@ -108,7 +135,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-moz-range-track {
-    max-width: 500px;
+    max-width: 320px;
     height: 6px;
     cursor: pointer;
     background: #D6DCDA;
@@ -116,7 +143,7 @@ input[type=range]::-moz-range-track {
 }
   
   input[type=range]::-ms-track {
-    max-width: 500px;
+    max-width: 320px;
     height: 6px;
     cursor: pointer;
     background: #D6DCDA;
@@ -131,8 +158,8 @@ input[type=range]::-moz-range-track {
 
 .formField--dropdown > div > select {
     width: 150px;
-    height: 40px;
-    line-height: 40px;
+    height: 44px;
+    line-height: 44px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -157,7 +184,7 @@ input[type=range]::-moz-range-track {
     margin-top: 20px;
 }
 
-.filtersInput__apply > div {
+.filtersInput__apply > button {
     display: flex;
     background-color: #C08404;
     color: white;
@@ -165,8 +192,10 @@ input[type=range]::-moz-range-track {
     width: 70%;
     justify-content: center;
     align-items: center;
+    border-radius: 3px;
 }
 
-.filtersInput__apply > div:hover {
+.filtersInput__apply > button:hover {
     cursor: pointer;
+    background-color: #B17A03;
 } 

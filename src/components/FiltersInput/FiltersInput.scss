@@ -1,3 +1,7 @@
+$filtersInputMaxWidth: 320px;
+$InputMarginBottom: 20px;
+$filterHeight: 48px;
+
 .filtersInput {
     display: flex;
     flex-direction: column;
@@ -5,12 +9,12 @@
 
     &__cancelReset {
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: $InputMarginBottom;
     }
 
     &__cancelReset > button {
         width: 100%;
-        height: 48px;
+        height: $filterHeight;
         padding: 0;
         border: 1px solid #D7D3CE;
         font-weight: 300;
@@ -38,7 +42,7 @@
         position: -webkit-sticky;
         position: sticky;
         bottom: 1rem;
-        margin-top: 20px;
+        margin-top: $InputMarginBottom;
     }
 
     &__apply > button {
@@ -65,7 +69,7 @@
 
     > div {
         width: 100%;
-        max-width: 320px;
+        max-width: $filtersInputMaxWidth;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -74,12 +78,12 @@
 
     &__label {
         width: 150px; 
-        height: 44px;
-        line-height: 44px; 
+        height: $filterHeight;
+        line-height: $filterHeight; 
     }
 
     input[type=range] {
-        max-width: 320px;
+        max-width: $filtersInputMaxWidth;
     }
 
     &--dropdown {
@@ -88,8 +92,8 @@
 
     > div > select {
         width: 150px;
-        height: 44px;
-        line-height: 44px;
+        height: $filterHeight;
+        line-height: $filterHeight;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -100,7 +104,7 @@
         border-radius: 3px;
         background-image: url('./assets/arrow-down.svg');
         background-repeat: no-repeat; 
-        background-position: right 10px bottom 14px;
+        background-position: right 10px bottom 20px;
     }
 
     &--dropdown > select:focus {
@@ -129,7 +133,7 @@
     &__option label {
         border: 1px solid rgb(166, 166, 166);
         border-radius: 3px;
-        padding: 13px 10px;
+        padding: 14px 10px;
         background-color: white;
     }
 
@@ -145,6 +149,6 @@
 }
 
 .filters_slidecontainer {
-    margin-bottom: 20px;
+    margin-bottom: $InputMarginBottom;
 }
 

@@ -40,6 +40,8 @@ input[type=checkbox] {
   opacity: 0;
 }
 
+/* Focus styles*/
+
 input[type=text]:focus,
 input[type=number]:focus,
 input[type=range]:focus,
@@ -63,32 +65,82 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 input[type=range]:focus {
+  outline: none; /* Removes the blue border */
   border: none;
   box-shadow: none;
 }
+
+/* End of Focus styles*/
+
  
 select:hover {
   cursor: pointer; 
 }
 
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-}
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
+/* Styling of range input*/
 
-input[type=range]:focus {
-  outline: none; /* Removes the blue border */
-}
+  input[type=range] {
+    -webkit-appearance: none; 
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
 
-input[type=range]::-ms-track {
-  cursor: pointer;
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
-}
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #249974;
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    margin-top: -14px;
+  }
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    border: 1px solid #249974;
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    margin-top: -14px;
+  }
+
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    border: 1px solid #249974;
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    margin-top: -14px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    max-width: 320px;
+    height: 6px;
+    cursor: pointer;
+    background: #D6DCDA;
+    border-radius: 3px;
+  }
+
+  input[type=range]::-moz-range-track {
+    max-width: 320px;
+    height: 6px;
+    cursor: pointer;
+    background: #D6DCDA;
+    border-radius: 3px;
+  }
+
+  input[type=range]::-ms-track {
+    max-width: 320px;
+    height: 6px;
+    cursor: pointer;
+    background: #D6DCDA;
+    border-radius: 3px;    
+    border-color: transparent;
+    color: transparent;
+  }
+/* End of Styling of range input*/

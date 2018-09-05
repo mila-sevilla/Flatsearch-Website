@@ -2,6 +2,14 @@ $FilterInputMaxWidth: 320px;
 $InputMarginBottom: 20px;
 $buttonHeight: 48px;
 
+// color variables
+$color-primary: #FFAE00;
+$color-red: #EB5757;
+$color-text-dark: #53504B;
+$color-input-border: #C9C5BD;
+$color-secondary: #249974;;
+$color-secondary-dark: #177456;
+
 .filtersInput {
     display: flex;
     flex-direction: column;
@@ -16,7 +24,6 @@ $buttonHeight: 48px;
         width: 100%;
         height: $buttonHeight;
         padding: 0;
-        border: 1px solid #D7D3CE;
         font-weight: 300;
         background-repeat: no-repeat;
         background-color: white;
@@ -25,14 +32,17 @@ $buttonHeight: 48px;
 
     &__cancel {
         background-image: url("./assets/close.svg");
+        border: 1px solid $color-input-border;
+        border-right: none;
     }
 
     &__cancel:focus {
-        border: 1px solid #FFAE00;
+        border: 1px solid $color-primary;
     }
 
     &__reset {
         background-image: url("./assets/reset.svg");
+        border: 1px solid $color-input-border;
     } 
 
     &__apply {
@@ -63,7 +73,7 @@ $buttonHeight: 48px;
 }
 
 .formField {
-    color: #53504B;
+    color: $color-text-dark;
     display: flex;
     flex-wrap: wrap;
 
@@ -99,8 +109,8 @@ $buttonHeight: 48px;
         appearance: none;
         padding: 0 10px;
         background-color: white;
-        color: #53504B;
-        border:1px solid rgb(166, 166, 166);
+        color: $color-text-dark;
+        border:1px solid $color-input-border;
         border-radius: 3px;
         background-image: url('./assets/arrow-down.svg');
         background-repeat: no-repeat; 
@@ -108,7 +118,7 @@ $buttonHeight: 48px;
     }
 
     &--dropdown > select:focus {
-        border: 1px solid #FFAE00;
+        border: 1px solid $color-primary;
         outline: none;
     }       
 }
@@ -130,7 +140,7 @@ $buttonHeight: 48px;
     }
 
     &__option label {
-        border: 1px solid rgb(166, 166, 166);
+        border: 1px solid $color-input-border;
         border-radius: 3px;
         padding: 14px 10px;
         background-color: white;
@@ -141,9 +151,9 @@ $buttonHeight: 48px;
     }
 
     &__option input:checked + label {
-        border: 1px solid #249974;
+        border-color: $color-secondary;
         color: white;
-        background-color: #249974;
+        background-color: $color-secondary;
     }
 }
 

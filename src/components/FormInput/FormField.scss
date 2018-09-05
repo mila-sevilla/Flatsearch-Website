@@ -1,0 +1,225 @@
+$buttonHeight: 48px;
+$InputMaxWidth: 500px;
+$InputMarginBottom: 20px;
+$color-yellow: #FFAE00;
+$color-red: #EB5757;
+
+.formField {
+    color: #53504B;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+
+    > div {
+        width: 100%;
+        max-width: $InputMaxWidth;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__label {
+        width: 150px; 
+        height: $buttonHeight;
+        line-height: $buttonHeight; 
+    }
+
+    &__input {
+        height: $buttonHeight;
+        width: 100%;
+        max-width: 180px;
+        margin-right: 10px; 
+        border: 1px solid rgb(166, 166, 166);
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+    &__input--suffix {
+        border-radius: 3px 0 0 3px;
+        margin-right: 0;
+    }
+
+    &__suffix {
+        border-radius: 0 3px 3px 0;
+        border: 1px solid rgb(166, 166, 166);
+        border-left: none;
+        padding: 14px 10px;
+        
+    }
+
+    &__input--large {
+        max-width: $InputMaxWidth;
+        margin-right: 0;
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: $InputMaxWidth;
+        min-height: 35px;
+    }
+
+    &__error > small { 
+        padding-left: 25px;  
+        background-image: url('./assets/warning.svg');
+        background-repeat: no-repeat; 
+        color: $color-red; 
+        font-weight: 300;
+    }
+
+    &__input--textarea {
+        height: 200px;
+        margin-right: 0;
+        max-width: $InputMaxWidth;
+        color: #53504B;
+    }
+
+    &--textarea textarea {
+        font-weight: 300;
+    }
+
+    &--textarea > div {
+        max-width: $InputMaxWidth;
+    }
+
+    &--checkbox {
+        display: flex;
+        position: relative;
+        min-height: 22px;
+        align-items: center;
+        margin-bottom: $InputMarginBottom;
+        font-weight: 300;
+    }
+
+    &__input--checkbox {
+        opacity: 0;
+    }
+
+    &--checkbox__tick {
+        cursor: pointer;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background: white;
+        border:1px solid rgb(166, 166, 166);
+        border-radius: 3px;
+    }
+
+    &--checkbox__tick:after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 7px;
+        background: transparent;
+        top: 5px;
+        left: 4px;
+        border: 2px solid $color-yellow;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-48deg);
+    } 
+
+    &--checkbox input[type=checkbox]:checked + label:after {
+        opacity: 1;
+    }
+
+    &--checkbox__label {
+        padding-left: 35px;
+    }
+
+    &--checkbox__label:hover {
+        cursor: pointer; 
+    }
+
+    > .formField--dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+        font-weight: 300;
+        width: 140px;
+        margin-bottom: 15px;
+    }
+
+    &--dropdown > label {
+        margin: 5px 0 10px 0;
+    }
+
+    &--dropdown > select {
+        width: 100%;
+        height: $buttonHeight;
+        line-height: $buttonHeight;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0 10px;
+        background-color: white;
+        color: #53504B;
+        border:1px solid rgb(166, 166, 166);
+        border-radius: 3px;
+        background-image: url('./assets/arrow-down.svg');
+        background-repeat: no-repeat; 
+        background-position: right 10px bottom 18px;
+    }
+
+    &--dropdown > select:focus {
+        border: 1px solid $color-yellow;
+        outline: none;
+    }
+
+    &--dropdown--multiple > div:first-child {
+        margin-right: 10px;
+        width: 170px;
+    }
+
+    &--dropdown--multiple > div:nth-child(2n) > select {
+        width: 105px;
+    }
+}
+
+.addListingChips {
+    margin-bottom: $InputMarginBottom;
+
+    input {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    &__option {
+        display: flex;
+    }
+
+    &__option label {
+        border: 1px solid rgb(166, 166, 166);
+        border-radius: 3px;
+        padding: 14px 10px;
+        background-color: white;
+    }
+
+    &__option label:hover {
+        cursor: pointer; 
+    }
+
+    &__option:first-child {
+        margin-right: 10px;
+    }
+
+    &__option input:checked + label { 
+        border: 1px solid $color-yellow;
+        box-shadow: inset 0 0 0 1px $color-yellow; 
+    }
+
+    &__options--extended > div {
+        max-width: $InputMaxWidth;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__options--extended > div > .addListingChips__option {
+        padding-bottom: 15px;
+    }
+}

@@ -1,6 +1,6 @@
-$filtersInputMaxWidth: 320px;
+$FilterInputMaxWidth: 320px;
 $InputMarginBottom: 20px;
-$filterHeight: 48px;
+$buttonHeight: 48px;
 
 .filtersInput {
     display: flex;
@@ -14,13 +14,13 @@ $filterHeight: 48px;
 
     &__cancelReset > button {
         width: 100%;
-        height: $filterHeight;
+        height: $buttonHeight;
         padding: 0;
         border: 1px solid #D7D3CE;
         font-weight: 300;
         background-repeat: no-repeat;
         background-color: white;
-        background-position: 25px 17px;
+        background-position: 25px 18px;
     }
 
     &__cancel {
@@ -69,7 +69,7 @@ $filterHeight: 48px;
 
     > div {
         width: 100%;
-        max-width: $filtersInputMaxWidth;
+        max-width: $FilterInputMaxWidth;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -78,12 +78,12 @@ $filterHeight: 48px;
 
     &__label {
         width: 150px; 
-        height: $filterHeight;
-        line-height: $filterHeight; 
+        height: $buttonHeight;
+        line-height: $buttonHeight; 
     }
 
     input[type=range] {
-        max-width: $filtersInputMaxWidth;
+        max-width: $FilterInputMaxWidth;
     }
 
     &--dropdown {
@@ -92,8 +92,8 @@ $filterHeight: 48px;
 
     > div > select {
         width: 150px;
-        height: $filterHeight;
-        line-height: $filterHeight;
+        height: $buttonHeight;
+        line-height: $buttonHeight;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -110,8 +110,7 @@ $filterHeight: 48px;
     &--dropdown > select:focus {
         border: 1px solid #FFAE00;
         outline: none;
-    }
-        
+    }       
 }
 
 .addListingChips {

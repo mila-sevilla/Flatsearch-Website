@@ -1,0 +1,35 @@
+// media breakpoints
+$breakpoint-header: 890px;
+$breakpoint-header-max: $breakpoint-header - 1;
+
+// outer gutter width
+$outer-gutter-width: 15px; // consider an odd number
+
+// color variables
+$color-primary: #ffae00;
+$color-secondary: #249974;;
+$color-secondary-dark: #177456;
+$color-text-light: #B3B1AD;
+$color-text-dark: #53504B;
+$color-input-border: #C9C5BD;
+$color-red: #EB5757;
+
+// font-weight
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+// font-size
+$font-size-regular: 14px;
+$font-size-heading: 16px; 
+
+
+// filter input
+$FilterInputMaxWidth: 320px;
+$InputMarginBottom: 20px;
+$buttonHeight: 48px;
+
+
+// Form Field
+$buttonHeight: 48px;
+$InputMaxWidth: 500px;
+$InputMarginBottom: 20px;

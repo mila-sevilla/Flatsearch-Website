@@ -1,32 +1,11 @@
-// media breakpoints
-$breakpoint-header: 890px;
-$breakpoint-header-max: $breakpoint-header - 1;
-
-// outer gutter width
-$outer-gutter-width: 15px; // consider an odd number
-
-// color variables
-$color-primary: #ffae00;
-$color-secondary: #249974;;
-$color-secondary-dark: #177456;
-$color-text-light: #B3B1AD;
-$color-text-dark: #53504B;
-$color-input-border: #C9C5BD;
-
-//font-weight
-$font-weight-regular: 300;
-$font-weight-bold: 500;
-
-//font-size
-$font-size-normal: 14px;
-$font-size-heading: 16px; 
+@import "src/GlobalSass.scss";  
 
 .appHeader {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    font-size: $font-size-normal;
+    font-size: $font-size-regular;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
@@ -107,7 +86,7 @@ $font-size-heading: 16px;
             background-image: url('./assets/searchicon.svg');
             background-position: 10px 10px;
             background-repeat: no-repeat;
-            font-size: $font-size-normal; /* probably not needed */
+            font-size: $font-size-regular; /* probably not needed */
             -webkit-appearance: none;
 
             &:focus {
@@ -133,7 +112,7 @@ $font-size-heading: 16px;
         line-height: 74px; /* center vertically its child */
         margin: 0 $outer-gutter-width;
         padding: 0; /* to reset user agent padding on btn element */
-        font-size: $font-size-normal; /* probably not needed */
+        font-size: $font-size-regular; /* probably not needed */
         text-decoration: none;
         color: #53504B;
     }

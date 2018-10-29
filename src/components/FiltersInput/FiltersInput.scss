@@ -1,23 +1,4 @@
-$FilterInputMaxWidth: 320px;
-$InputMarginBottom: 20px;
-$buttonHeight: 48px;
-
-//font-weight
-$font-weight-regular: 300;
-$font-weight-bold: 500;
-
-//font-size
-$font-size-normal: 14px;
-$font-size-heading: 16px; 
-
-// color variables
-$color-primary: #FFAE00;
-$color-red: #EB5757;
-$color-text-dark: #53504B;
-$color-input-border: #C9C5BD;
-$color-secondary: #249974;;
-$color-secondary-dark: #177456;
-
+@import "src/GlobalSass.scss";  
 
 .filtersInput {
     display: flex;

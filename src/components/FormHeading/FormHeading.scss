@@ -1,0 +1,13 @@
+@import "src/GlobalSass.scss";  
+
+.formHeading {
+    margin: 15px 15px 55px 15px;
+    display: inline-block;
+    font-size: $font-size-heading;
+    font-weight: $font-weight-bold;
+    color: $color-primary-dark;
+
+    &__black {
+        color: $color-text-dark;
+    }   
+}

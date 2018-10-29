@@ -80,7 +80,7 @@
             max-width: 293px;
             width: 100%;
             height: 45px;
-            border: 1px solid #C9C5BD;
+            border: 1px solid $color-input-border;
             border-radius: 3px;
             padding: 0 100px 0 40px; /* 100px? */
             background-image: url('./assets/searchicon.svg');
@@ -91,7 +91,7 @@
 
             &:focus {
                 outline: none;
-                border: 1px solid #53504B;
+                border: 1px solid $color-text-dark;
             }
 
             &::placeholder {
@@ -114,7 +114,7 @@
         padding: 0; /* to reset user agent padding on btn element */
         font-size: $font-size-regular; /* probably not needed */
         text-decoration: none;
-        color: #53504B;
+        color: $color-text-dark;
     }
 
     /* Hover effect on nav items */

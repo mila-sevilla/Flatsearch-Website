@@ -2,6 +2,14 @@ $buttonHeight: 48px;
 $InputMaxWidth: 500px;
 $InputMarginBottom: 20px;
 
+//font-weight
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+//font-size
+$font-size-normal: 14px;
+$font-size-heading: 16px; 
+
 // color variables
 $color-primary: #FFAE00;
 $color-red: #EB5757;
@@ -74,7 +82,7 @@ $color-secondary-dark: #177456;
         background-image: url('./assets/warning.svg');
         background-repeat: no-repeat; 
         color: $color-red; 
-        font-weight: 300;
+        font-weight: $font-weight-regular;
     }
 
     &__input--textarea {
@@ -85,7 +93,7 @@ $color-secondary-dark: #177456;
     }
 
     &--textarea textarea {
-        font-weight: 300;
+        font-weight: $font-weight-regular;
     }
 
     &--textarea > div {
@@ -100,7 +108,7 @@ $color-secondary-dark: #177456;
         min-height: 22px;
         align-items: center;
         margin-bottom: $InputMarginBottom;
-        font-weight: 300;
+        font-weight: $font-weight-regular;
 
     &__input {
         opacity: 0;
@@ -152,8 +160,8 @@ $color-secondary-dark: #177456;
         align-items: flex-start;
         background-color: white;
         color: $color-text-dark;
-        font-size: 14px;
-        font-weight: 300;
+        font-size: $font-size-normal;
+        font-weight: $font-weight-regular;
         width: 140px;
         margin-bottom: 15px;
 

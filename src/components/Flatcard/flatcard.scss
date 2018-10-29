@@ -1,0 +1,154 @@
+//font-weight
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+//font-size
+$font-size-regular: 14px; 
+
+// color variables
+$color-primary: #FFAE00;
+$color-red: #EB5757;
+$color-text-dark: #53504B;
+$color-input-border: #C9C5BD;
+$color-secondary: #249974;;
+$color-secondary-dark: #177456;
+
+
+html {
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+.flatcard {
+    border-radius: 3px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    overflow: hidden;
+    max-width: 450px;
+
+    &:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+
+    &__image {
+        position: relative;
+        flex: 1 0 300px;
+    }
+
+    &__image > img {
+        max-width: 100%;
+        display: block;
+    }
+
+    &__banner {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        margin-right: 36px;
+        background: rgba(175, 173, 169, 0.9);
+        padding: 10px 12px;
+        border-radius: 0 0 3px 3px;
+        opacity: 90%;
+        font-size: 15px;
+        font-weight: $font-weight-bold;
+        color: white;
+    }
+}
+
+
+.flatcard__details {
+    margin: 5px 0 0 0;
+
+    &-flattype {
+        background-image: url("./assets/group.svg"); 
+    }
+
+    &-location {
+        background-image: url("./assets/location.svg");
+    }
+
+    &-availability {
+        background-image: url("./assets/clock.svg");
+    }
+}
+
+
+.btn__fav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white; 
+    margin: 5px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    height: 35px;
+    width: 35px;
+
+    svg {
+        display: block;
+        margin: auto;
+    }
+
+    &:hover {
+        transform:scale(1.1,1.1);
+    }
+
+    :hover > svg path {
+        fill: $color-primary;
+        transition: all ease 0.1s;
+    }
+}
+
+.nav-dots {
+    height: 9px;
+    width: 100%;
+    bottom: 9px;
+    display: block;
+    position: absolute;
+    text-align: center; 
+}
+
+.nav-dot {
+	top: -5px;
+	width: 9px;
+	height: 9px;
+    margin: 0 4px;
+    padding: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+    &:hover { 
+        cursor: pointer;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.flatcard__content {
+    padding: 20px; 
+
+    > h2 {
+        border: 0;
+        margin: 0;
+        font-weight: $font-weight-bold;
+        font-size: 16px;
+    }
+
+    p {
+        text-indent: 40px;
+        margin-bottom: 0;
+        background-repeat: no-repeat;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-regular;
+    }   
+}
+
+

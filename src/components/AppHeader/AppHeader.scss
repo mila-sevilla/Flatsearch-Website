@@ -13,12 +13,20 @@ $color-text-light: #B3B1AD;
 $color-text-dark: #53504B;
 $color-input-border: #C9C5BD;
 
+//font-weight
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+//font-size
+$font-size-normal: 14px;
+$font-size-heading: 16px; 
+
 .appHeader {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    font-size: 14px;
+    font-size: $font-size-normal;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
@@ -99,7 +107,7 @@ $color-input-border: #C9C5BD;
             background-image: url('./assets/searchicon.svg');
             background-position: 10px 10px;
             background-repeat: no-repeat;
-            font-size: 14px; /* probably not needed */
+            font-size: $font-size-normal; /* probably not needed */
             -webkit-appearance: none;
 
             &:focus {
@@ -125,7 +133,7 @@ $color-input-border: #C9C5BD;
         line-height: 74px; /* center vertically its child */
         margin: 0 $outer-gutter-width;
         padding: 0; /* to reset user agent padding on btn element */
-        font-size: 14px; /* probably not needed */
+        font-size: $font-size-normal; /* probably not needed */
         text-decoration: none;
         color: #53504B;
     }
@@ -183,7 +191,7 @@ $color-input-border: #C9C5BD;
             > span {
                 width: 44px;
                 height: 44px;
-                font-size: 16px; /* important to define because of Avatar */
+                font-size: $font-size-heading; /* important to define because of Avatar */
                 background-image: none; /* remove hamburger icon bg */
                 
                 /* if user has a profile pic, it will go here as a bg image */

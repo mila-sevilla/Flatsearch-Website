@@ -2,6 +2,10 @@ $FilterInputMaxWidth: 320px;
 $InputMarginBottom: 20px;
 $buttonHeight: 48px;
 
+//font-weight
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
 // color variables
 $color-primary: #FFAE00;
 $color-red: #EB5757;
@@ -24,7 +28,7 @@ $color-secondary-dark: #177456;
         width: 100%;
         height: $buttonHeight;
         padding: 0;
-        font-weight: 300;
+        font-weight: $font-weight-regular;
         background-repeat: no-repeat;
         background-color: white;
         background-position: 25px 18px;

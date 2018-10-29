@@ -1,3 +1,20 @@
+//font-weight
+$font-weight-regular: 300;
+$font-weight-bold: 500;
+
+//font-size
+$font-size-normal: 14px;
+$font-size-heading: 16px; 
+
+// color variables
+$color-primary: #FFAE00;
+$color-red: #EB5757;
+$color-text-dark: #53504B;
+$color-input-border: #C9C5BD;
+$color-secondary: #249974;;
+$color-secondary-dark: #177456;
+
+
 .addListingProgressBar {
     display: flex;
     flex-direction: column;
@@ -23,19 +40,19 @@
     }
 }
 
-
+//for browser compatibility//
 progress[value]::-webkit-progress-bar {
     background-color: #D6DCDA;
     border-radius: 10px;
 }
 
 progress[value]::-moz-progress-bar {
-    background-color: #249974;
+    background-color: $color-secondary;
     border-radius: 10px;
 }
 
 progress[value]::-webkit-progress-value {
       border-radius: 10px; 
-      background-color: #249974;
+      background-color: $color-secondary;
 }
 
